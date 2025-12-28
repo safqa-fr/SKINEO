@@ -142,21 +142,6 @@
         "text_color": ""
       }
     },
-    "image_with_text_overlay_nbBEBz": {
-      "type": "image-with-text-overlay",
-      "name": "Image with text overlay",
-      "settings": {
-        "full_width": true,
-        "allow_transparent_header": false,
-        "enable_parallax": false,
-        "image_size": "fill",
-        "mobile_text_position": "place-self-center text-center",
-        "desktop_text_position": "sm:place-self-center sm:text-center",
-        "text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0
-      }
-    },
     "before_after_image_Uwc9Ta": {
       "type": "before-after-image",
       "name": "Before/after image",
@@ -181,13 +166,52 @@
         "drag_cursor_background": "#ffffff",
         "drag_cursor_color": "#000000"
       }
+    },
+    "media_grid_z3FBYz": {
+      "type": "media-grid",
+      "blocks": {
+        "image_kyeaqb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_e9e9b296-b0c1-4664-9286-2b98f47bcddd.webp",
+            "title": "",
+            "heading_tag": "h4",
+            "link_url": "",
+            "link_text": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 2,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_kyeaqb"
+      ],
+      "name": "Media grid",
+      "settings": {
+        "full_width": true,
+        "reduce_width": false,
+        "desktop_row_height": 290,
+        "mobile_row_height": 150,
+        "background": "",
+        "background_gradient": ""
+      }
     }
   },
   "order": [
     "image_with_text_overlay_ctfJ7C",
     "logo_list_xPKiBq",
     "rich_text_EpTY88",
-    "image_with_text_overlay_nbBEBz",
+    "media_grid_z3FBYz",
     "before_after_image_Uwc9Ta"
   ]
 }
