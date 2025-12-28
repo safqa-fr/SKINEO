@@ -444,12 +444,6 @@
             "payment_button_text_color": ""
           }
         },
-        "liquid_N33KKm": {
-          "type": "liquid",
-          "settings": {
-            "liquid": ""
-          }
-        },
         "image_DJR8Ua": {
           "type": "image",
           "settings": {
@@ -476,7 +470,6 @@
         "variant_picker_AhznWc",
         "quantity_selector_geCbwR",
         "buy_buttons_FhCkcP",
-        "liquid_N33KKm",
         "image_DJR8Ua",
         "pickup_availability_w7YJ4N"
       ],
@@ -498,6 +491,63 @@
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
       }
+    },
+    "tabs_GdnMbM": {
+      "type": "tabs",
+      "blocks": {
+        "tab_Fcrxeb": {
+          "type": "tab",
+          "settings": {
+            "title": "Key Features",
+            "content": "<ul><li><strong>Manual facial brush</strong><br/>Designed for simple, intuitive daily use.</li><li><strong>Ergonomic curved shape</strong><br/>Naturally follows the contours of the face, including cheeks, jawline, and neck.</li><li><strong>Soft, flexible fibers</strong><br/>Gentle contact on the skin for a comfortable experience during use.</li><li><strong>Natural wood base</strong><br/>Premium, authentic finish with unique wood grain on each piece.</li><li><strong>Can be used dry or with skincare products</strong><br/>Easily integrates into any existing facial routine.</li><li><strong>Compact and lightweight design</strong><br/>Easy to handle and convenient to carry.</li><li><strong>Protective storage case included</strong><br/>Keeps the brush clean and protected, ideal for travel.</li><li><strong>Reusable product</strong><br/>No consumables required, designed for long-term use.</li><li><strong>Quick daily routine</strong><br/>Recommended use: <strong>2–3 minutes per day</strong>.</li></ul>",
+            "page": ""
+          }
+        },
+        "tab_r9wcA8": {
+          "type": "tab",
+          "settings": {
+            "title": "Try it risk-free for 30 days",
+            "content": "<p>Try the Skineo Face Brush risk-free <strong>for 30 day</strong>s. If you are not completely satisfied with your Skineo Face Brush, <strong>you may return it for a full refund</strong>.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "tab_RYhXUB": {
+          "type": "tab",
+          "settings": {
+            "title": "Free Delivery to Your Door",
+            "content": "<p><strong>Free home delivery is included. </strong>Depending on the volume of orders being processed, delivery is estimated between <strong>5 and 7 business days</strong>.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "tab_9gTqpU": {
+          "type": "tab",
+          "settings": {
+            "title": "7-day customer support",
+            "content": "<p><strong>Our team is available to answer your questions seven days a week.</strong></p><p>You can contact us by email or phone during the following hours: <strong>Monday to Friday from 9:00 a.m. to 12:00 p.m. and from 2:00 p.m. to 6:00 p.m., and Saturday and Sunday from 10:00 a.m. to 12:00 p.m.Feel free to get in touch with us.</strong></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_Fcrxeb",
+        "tab_r9wcA8",
+        "tab_RYhXUB",
+        "tab_9gTqpU"
+      ],
+      "name": "Tabs",
+      "settings": {
+        "full_width": true,
+        "content_size": "medium",
+        "subheading": "Subheading",
+        "title": "Heading",
+        "text_alignment": "center",
+        "first_tab_open": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
     }
   },
   "order": [
@@ -508,6 +558,7 @@
     "before_after_image_Uwc9Ta",
     "multi_column_bLbGFt",
     "multi_column_gfT6Db",
-    "featured_product_AWrxYa"
+    "featured_product_AWrxYa",
+    "tabs_GdnMbM"
   ]
 }
