@@ -15,13 +15,20 @@
         "heading_kAJmTa": {
           "type": "heading",
           "settings": {
-            "text": "Allégez votre corps dès aujourd’hui",
-            "heading_tag": "h1"
+            "text": "Feel Lighter Starting Today",
+            "heading_tag": "h0"
+          }
+        },
+        "richtext_XY6iPf": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h4>A natural daily ritual for a lighter, more relaxed body</h4>"
           }
         }
       },
       "block_order": [
-        "heading_kAJmTa"
+        "heading_kAJmTa",
+        "richtext_XY6iPf"
       ],
       "name": "Image with text overlay",
       "settings": {
@@ -87,7 +94,7 @@
         "title": "As Seen On",
         "content": "",
         "text_alignment": "center",
-        "items_per_row": 5,
+        "items_per_row": 4,
         "background": "",
         "background_gradient": "",
         "text_color": "",
@@ -97,21 +104,21 @@
         "logo_item_border": ""
       }
     },
-    "rich_text_TNki9Y": {
+    "rich_text_EpTY88": {
       "type": "rich-text",
       "blocks": {
-        "heading_kzVRR3": {
+        "heading_pq6PCJ": {
           "type": "heading",
           "settings": {
             "text": "Why Choose Skineo ?",
-            "heading_tag": "h3",
+            "heading_tag": "h2",
             "text_color": "",
             "gradient": ""
           }
         }
       },
       "block_order": [
-        "heading_kzVRR3"
+        "heading_pq6PCJ"
       ],
       "name": "Rich text",
       "settings": {
@@ -138,12 +145,39 @@
         "overlay_color": "#000000",
         "overlay_opacity": 0
       }
+    },
+    "rich_text_4HAmzg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TYTEMF": {
+          "type": "heading",
+          "settings": {
+            "text": "Before & After Results",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_TYTEMF"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
     "image_with_text_overlay_ctfJ7C",
     "logo_list_xPKiBq",
-    "rich_text_TNki9Y",
-    "image_with_text_overlay_nbBEBz"
+    "rich_text_EpTY88",
+    "image_with_text_overlay_nbBEBz",
+    "rich_text_4HAmzg"
   ]
 }
