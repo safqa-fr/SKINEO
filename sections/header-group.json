@@ -69,7 +69,7 @@
         "logo": "shopify://shop_images/LuxiBook_3.png",
         "logo_max_width": 145,
         "logo_mobile_max_width": 100,
-        "menu": "main-menu",
+        "menu": "main-menu-1",
         "sidebar_menu": "",
         "secondary_menu": "",
         "menu_open_trigger": "click",
