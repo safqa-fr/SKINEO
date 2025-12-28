@@ -523,7 +523,7 @@
           "type": "tab",
           "settings": {
             "title": "7-day customer support",
-            "content": "<p><strong>Our team is available to answer your questions seven days a week.</strong></p><p>You can contact us by email or phone during the following hours: <strong>Monday to Friday from 9:00 a.m. to 12:00 p.m. and from 2:00 p.m. to 6:00 p.m., and Saturday and Sunday from 10:00 a.m. to 12:00 p.m.Feel free to get in touch with us.</strong></p>",
+            "content": "<p>Our team is available to answer your questions seven days a week.</p><p>You can contact us by email or phone during the following hours: <strong>Monday to Friday from 9:00 a.m. to 12:00 p.m. and from 2:00 p.m. to 6:00 p.m., and Saturday and Sunday from 10:00 a.m. to 12:00 p.m. </strong></p><p>Feel free to get in touch with us.</p>",
             "page": ""
           }
         }
@@ -538,8 +538,8 @@
       "settings": {
         "full_width": true,
         "content_size": "medium",
-        "subheading": "Subheading",
-        "title": "Heading",
+        "subheading": "",
+        "title": "",
         "text_alignment": "center",
         "first_tab_open": false,
         "background": "",
