@@ -228,72 +228,30 @@
         "drag_cursor_color": "#000000"
       }
     },
-    "logo_list_PFCeyd": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_agTf4n": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/688d233a-6b22-4246-9d2a-50b4e819eb01.png",
-            "logo_width": 300,
-            "link": ""
-          }
-        },
-        "logo_wNVxx9": {
-          "type": "logo",
-          "settings": {
-            "logo_width": 120,
-            "link": ""
-          }
-        },
-        "logo_9jRWAC": {
-          "type": "logo",
-          "settings": {
-            "logo_width": 120,
-            "link": ""
-          }
-        },
-        "logo_dNUjfg": {
-          "type": "logo",
-          "settings": {
-            "logo_width": 120,
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_agTf4n",
-        "logo_wNVxx9",
-        "logo_9jRWAC",
-        "logo_dNUjfg"
-      ],
-      "name": "Logo list",
-      "settings": {
-        "full_width": true,
-        "stack_mobile": true,
-        "title": "Logo list",
-        "content": "",
-        "text_alignment": "start",
-        "items_per_row": 5,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "logo_item_background": "#ffffff",
-        "logo_item_border": ""
-      }
-    },
     "multi_column_bLbGFt": {
       "type": "multi-column",
       "blocks": {
+        "item_UtYCUV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_28_dec._2025_15_58_55.png",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
         "item_Ma4qJR": {
           "type": "item",
           "settings": {
-            "column_size": "3",
-            "title": "Column title",
+            "image": "shopify://shop_images/ChatGPT_Image_28_dec._2025_15_53_31.png",
+            "column_size": "4",
+            "title": "",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -302,10 +260,11 @@
         "item_pJrf7H": {
           "type": "item",
           "settings": {
-            "column_size": "3",
-            "title": "Column title",
+            "image": "shopify://shop_images/ChatGPT_Image_28_dec._2025_15_55_14.png",
+            "column_size": "4",
+            "title": "",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -314,10 +273,11 @@
         "item_WJMCJN": {
           "type": "item",
           "settings": {
-            "column_size": "3",
-            "title": "Column title",
+            "image": "shopify://shop_images/ChatGPT_Image_28_dec._2025_15_57_38.png",
+            "column_size": "4",
+            "title": "",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -325,6 +285,7 @@
         }
       },
       "block_order": [
+        "item_UtYCUV",
         "item_Ma4qJR",
         "item_pJrf7H",
         "item_WJMCJN"
@@ -334,10 +295,10 @@
         "full_width": true,
         "stack_on_mobile": false,
         "gap": "medium",
-        "text_alignment": "start",
-        "subheading": "About",
-        "title": "Featured content",
-        "content": "<p>Organize content into multiple columns to share useful information to your customers about your products, values...</p>",
+        "text_alignment": "center",
+        "subheading": "",
+        "title": "Clinically Tested Results",
+        "content": "<p>Based on an independent user study with 527 participants after 30 days.</p>",
         "background": "",
         "background_gradient": "",
         "text_color": ""
@@ -350,7 +311,6 @@
     "rich_text_EpTY88",
     "media_grid_z3FBYz",
     "before_after_image_Uwc9Ta",
-    "logo_list_PFCeyd",
     "multi_column_bLbGFt"
   ]
 }
