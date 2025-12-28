@@ -79,73 +79,73 @@
   "product": {
     "general": {
       "description": "Description",
-      "view_product": "Voir produit",
-      "quick_add": "+ Ajouter",
-      "add_to_cart_short": "+ Ajouter",
+      "view_product": "View product",
+      "quick_add": "+ Quick add",
+      "add_to_cart_short": "+ Add",
       "add_to_cart_button": "Try It Risk-Free",
-      "pre_order_button": "Pré-commander",
-      "sold_out_button": "En rupture",
-      "unavailable_button": "Indisponible",
-      "added_to_cart": "Produit ajouté au panier !",
-      "sold_out_badge": "En rupture",
-      "on_sale_badge": "Promo",
-      "discount_badge_html": "Economisez {{ savings }}",
+      "pre_order_button": "Pre-order",
+      "sold_out_button": "Out of stock",
+      "unavailable_button": "Unavailable",
+      "added_to_cart": "Added to cart!",
+      "sold_out_badge": "Sold out",
+      "on_sale_badge": "Sale",
+      "discount_badge_html": "Sale {{ savings }}",
       "sku": "SKU:",
       "variant": "Variant",
-      "view_in_space": "Afficher dans votre espace",
-      "taxes_included": "Taxes inclues",
-      "taxes_excluded": "Taxes exclues",
-      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link\">Frais d'envoi calculés</a> au paiement",
-      "size_chart": "Guide des tailles",
+      "view_in_space": "View in your space",
+      "taxes_included": "Taxes included",
+      "taxes_excluded": "Taxes excluded",
+      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link\">Shipping calculated</a> at checkout",
+      "size_chart": "Size guide",
       "available_colors_count": {
-        "one": "{{ count }} couleur",
-        "other": "{{ count }} couleurs"
+        "one": "{{ count }} color",
+        "other": "{{ count }} colors"
       }
     },
     "gallery": {
-      "close": "Fermer la galerie",
-      "zoom": "Zoomer sur l'image",
-      "error": "L'image ne peut pas etre chargée"
+      "close": "Close gallery",
+      "zoom": "Zoom in on image",
+      "error": "The image can’t be loaded"
     },
     "price": {
-      "regular_price": "Prix normal",
-      "sale_price": "Prix de vente",
-      "from_price_html": "A partir de {{ price_min }}"
+      "regular_price": "Regular price",
+      "sale_price": "Sale price",
+      "from_price_html": "From {{ price_min }}"
     },
     "quantity": {
-      "label": "Quantité",
-      "increase_quantity": "Augmenter la quantité",
-      "decrease_quantity": "Diminuer la quantité",
-      "minimum_of": "Minimum de {{ min }}",
-      "maximum_of": "Maximum de {{ max }}",
-      "increment_of": "Incrément de {{ step }}"
+      "label": "Quantity",
+      "increase_quantity": "Increase quantity",
+      "decrease_quantity": "Decrease quantity",
+      "minimum_of": "Minimum of {{ min }}",
+      "maximum_of": "Maximum of {{ max }}",
+      "increment_of": "Increment of {{ step }}"
     },
     "volume_pricing": {
-      "title": "Tarification basée sur le volume",
-      "minimum": "{{ quantity }} ou plus",
-      "price_at_each": "à {{ price }}/pièce"
+      "title": "Volume-based pricing",
+      "minimum": "{{ quantity }} or more",
+      "price_at_each": "{{ price }} each"
     },
     "rating_count": {
-      "zero": "Aucun avis",
-      "one": "{{ count }} avis",
-      "other": "{{ count }} avis"
+      "zero": "No reviews",
+      "one": "{{ count }} review",
+      "other": "{{ count }} reviews"
     },
     "inventory": {
-      "in_stock": "En stock",
-      "oversell_stock": "Re-stockage imminent",
-      "incoming_stock": "Re-stockage le {{ next_incoming_date }}",
+      "in_stock": "In stock",
+      "oversell_stock": "Restocking soon",
+      "incoming_stock": "Restocking on {{ next_incoming_date }}",
       "low_stock_with_quantity_count": {
-        "one": "Plus qu'un produit en stock",
-        "other": "Plus que {{count}} produits en stock"
+        "one": "Only 1 item left in stock",
+        "other": "Only {{ count }} items left in stock"
       }
     },
     "store_availability": {
-      "view_store_info": "Afficher les informations de la boutique",
-      "check_other_stores": "Vérifier la disponibilité dans d'autres boutiques",
-      "pick_up_available": "Récupération disponible",
-      "pick_up_currently_unavailable": "Récupération actuellement indisponible",
-      "pick_up_available_at": "Récupération disponible à {{ location_name }}",
-      "pick_up_unavailable_at": "Récupération actuellement indisponible à {{ location_name }}"
+      "view_store_info": "View store information",
+      "check_other_stores": "Check availability at other locations",
+      "pick_up_available": "Pickup available",
+      "pick_up_currently_unavailable": "Pickup currently unavailable",
+      "pick_up_available_at": "Pickup available at {{ location_name }}",
+      "pick_up_unavailable_at": "Pickup currently unavailable at {{ location_name }}"
     }
   },
   "collection": {
