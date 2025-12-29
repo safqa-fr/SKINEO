@@ -305,7 +305,7 @@
         "item_Fczg4G": {
           "type": "item",
           "settings": {
-            "video": "shopify://files/videos/9698f9c13ac247f7a705d1cd0d5cb4db.HD-1080p-4.8Mbps-64573181.mp4",
+            "video": "shopify://files/videos/ad-875363611675549_hd.mp4",
             "column_size": "4",
             "title": "",
             "heading_tag": "h4",
@@ -677,12 +677,12 @@
         "content": "",
         "link_url": "",
         "link_text": "",
-        "background": "",
+        "background": "#ffffff",
         "background_gradient": "",
         "text_color": "",
         "heading_color": "",
         "heading_gradient": "",
-        "testimonial_card_background": "",
+        "testimonial_card_background": "#f3e8dc",
         "testimonial_card_text_color": ""
       }
     },
@@ -706,22 +706,6 @@
         "button_background": "",
         "button_text_color": ""
       }
-    },
-    "image_with_text_overlay_km6cAD": {
-      "type": "image-with-text-overlay",
-      "name": "Image with text overlay",
-      "settings": {
-        "full_width": true,
-        "allow_transparent_header": false,
-        "enable_parallax": false,
-        "image_size": "auto",
-        "image": "shopify://shop_images/ChatGPT_Image_28_dec._2025_14_03_34.png",
-        "mobile_text_position": "place-self-center text-center",
-        "desktop_text_position": "sm:place-self-center sm:text-center",
-        "text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0
-      }
     }
   },
   "order": [
@@ -735,7 +719,6 @@
     "tabs_GdnMbM",
     "faq_nTcrqG",
     "testimonials_A6EEwQ",
-    "contact_AVdaDC",
-    "image_with_text_overlay_km6cAD"
+    "contact_AVdaDC"
   ]
 }
