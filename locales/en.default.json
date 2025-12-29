@@ -207,11 +207,11 @@
   },
   "contact": {
     "form": {
-      "name": "Name",
-      "email": "E-mail",
-      "message": "Message",
+      "name": "Your name",
+      "email": "Your email address",
+      "message": "How can we help you?",
       "submit": "Send message",
-      "success_message": "Your message has been sent."
+      "success_message": "Your message has been successfully sent."
     }
   },
   "customer": {
