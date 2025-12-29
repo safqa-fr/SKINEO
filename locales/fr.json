@@ -448,6 +448,9 @@
           "interaction_required": "Une interaction supplémentaire est requise pour finaliser la commande."
         }
       }
+    },
+    "links": {
+      "powered_by_shopify": " "
     }
   }
 }
