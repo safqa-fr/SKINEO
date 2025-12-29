@@ -318,7 +318,8 @@
       "empty": "Your cart is empty",
       "item_count": {
         "one": "{{ count }} item",
-        "other": "{{ count }} items"
+        "other": "{{ count }} items",
+        "zero": "{{ count }} éléments"
       },
       "continue_shopping": "Explore our products",
       "weight": "Weight",
@@ -417,7 +418,7 @@
   "password": {
     "general": {
       "follow_us": "Nous suivre",
-      "powered_by": "                                                        ",
+      "powered_by": "Cette boutique est alimentée par",
       "store_owner": "Gérant de la boutique ?",
       "login": "Se connecter"
     },
@@ -442,7 +443,14 @@
   },
   "shopify": {
     "links": {
-      "powered_by_shopify": " "
+      "powered_by_shopify": "Propulsé par Shopify"
+    },
+    "checkout": {
+      "required_extensions": {
+        "errors": {
+          "interaction_required": "Une interaction supplémentaire est requise pour finaliser la commande."
+        }
+      }
     }
   }
 }
