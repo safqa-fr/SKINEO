@@ -98,7 +98,7 @@
       "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link\">Frais de livraison</a> calculés lors du paiement\n",
       "size_chart": "Guide des tailles",
       "available_colors_count": {
-        "one": "{{ count }} color",
+        "one": "{{ count }} couleur",
         "other": "{{ count }} colors"
       }
     },
