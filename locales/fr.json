@@ -132,20 +132,20 @@
     },
     "inventory": {
       "in_stock": "En stock",
-      "oversell_stock": "Restocking soon",
-      "incoming_stock": "Restocking on {{ next_incoming_date }}",
+      "oversell_stock": "Réassort imminent",
+      "incoming_stock": "Réassort prévu le {{ next_incoming_date }}",
       "low_stock_with_quantity_count": {
-        "one": "Only 1 item left in stock",
-        "other": "Only {{ count }} items left in stock"
+        "one": "Plus qu’{{ count }} article en stock",
+        "other": "Plus que {{ count }} articles en stock"
       }
     },
     "store_availability": {
-      "view_store_info": "View store information",
-      "check_other_stores": "Check availability at other locations",
-      "pick_up_available": "Pickup available",
-      "pick_up_currently_unavailable": "Pickup currently unavailable",
-      "pick_up_available_at": "Pickup available at {{ location_name }}",
-      "pick_up_unavailable_at": "Pickup currently unavailable at {{ location_name }}"
+      "view_store_info": "Voir les informations de la boutique",
+      "check_other_stores": "Vérifier la disponibilité dans d’autres boutiques",
+      "pick_up_available": "Retrait en magasin disponible",
+      "pick_up_currently_unavailable": "Retrait en magasin indisponible",
+      "pick_up_available_at": "Retrait disponible à {{ location_name }}",
+      "pick_up_unavailable_at": "Retrait indisponible à {{ location_name }}"
     }
   },
   "collection": {
