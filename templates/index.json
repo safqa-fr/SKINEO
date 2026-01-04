@@ -116,22 +116,6 @@
         "logo_item_border": "#ffffff"
       }
     },
-    "image_with_text_overlay_m3n79G": {
-      "type": "image-with-text-overlay",
-      "name": "Image with text overlay",
-      "settings": {
-        "full_width": true,
-        "allow_transparent_header": false,
-        "enable_parallax": false,
-        "image_size": "auto",
-        "image": "shopify://shop_images/DE-PUFFS_IN_MINUTES_Helps_reduce_facial_puffiness_for_a_fresher_more_rested_look._3.png",
-        "mobile_text_position": "place-self-center text-center",
-        "desktop_text_position": "sm:place-self-center sm:text-center",
-        "text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0
-      }
-    },
     "before_after_image_Uwc9Ta": {
       "type": "before-after-image",
       "name": "Before/after image",
@@ -616,12 +600,86 @@
         "button_background": "",
         "button_text_color": ""
       }
+    },
+    "images_with_text_scrolling_cyjJ76": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_C9KWNn": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/5_e9e9b296-b0c1-4664-9286-2b98f47bcddd.webp",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "item_QA6JFx": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/5_e9e9b296-b0c1-4664-9286-2b98f47bcddd.webp",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "item_BznNLP": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/5_e9e9b296-b0c1-4664-9286-2b98f47bcddd.webp",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "item_HaqNWB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/5_e9e9b296-b0c1-4664-9286-2b98f47bcddd.webp",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading 1",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "item_EWFiif": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/5_e9e9b296-b0c1-4664-9286-2b98f47bcddd.webp",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading 2",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_C9KWNn",
+        "item_QA6JFx",
+        "item_BznNLP",
+        "item_HaqNWB",
+        "item_EWFiif"
+      ],
+      "name": "Images and text scrolling",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": true,
+        "show_counter": true,
+        "desktop_image_effect": "reveal",
+        "image_position": "end",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
     }
   },
   "order": [
     "image_with_text_overlay_ctfJ7C",
     "logo_list_xPKiBq",
-    "image_with_text_overlay_m3n79G",
     "before_after_image_Uwc9Ta",
     "multi_column_bLbGFt",
     "multi_column_gfT6Db",
@@ -629,6 +687,7 @@
     "1767125039fc7fb841",
     "tabs_GdnMbM",
     "faq_nTcrqG",
-    "contact_AVdaDC"
+    "contact_AVdaDC",
+    "images_with_text_scrolling_cyjJ76"
   ]
 }
