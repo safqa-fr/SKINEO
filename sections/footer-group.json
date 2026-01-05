@@ -21,8 +21,8 @@
             "mobile_icon_width": 24,
             "icon_width": 32,
             "icon_background_type": "circle",
-            "icon_background": "#6e4a2f",
-            "icon_color": "#ffffff",
+            "icon_background": "#ffffff",
+            "icon_color": "#6e4a2f",
             "title": "Free shipping",
             "content": ""
           }
@@ -34,8 +34,8 @@
             "mobile_icon_width": 24,
             "icon_width": 32,
             "icon_background_type": "circle",
-            "icon_background": "#6e4a2f",
-            "icon_color": "#ffffff",
+            "icon_background": "#ffffff",
+            "icon_color": "#6e4a2f",
             "title": "Money-Back Guarantee",
             "content": ""
           }
@@ -47,8 +47,8 @@
             "mobile_icon_width": 24,
             "icon_width": 32,
             "icon_background_type": "circle",
-            "icon_background": "#6e4a2f",
-            "icon_color": "#ffffff",
+            "icon_background": "#ffffff",
+            "icon_color": "#6e4a2f",
             "title": "Customer Support 7 Days a Week",
             "content": ""
           }
@@ -60,8 +60,8 @@
             "mobile_icon_width": 24,
             "icon_width": 32,
             "icon_background_type": "circle",
-            "icon_background": "#6e4a2f",
-            "icon_color": "#ffffff",
+            "icon_background": "#ffffff",
+            "icon_color": "#6e4a2f",
             "title": "Secure payment",
             "content": ""
           }
