@@ -50,8 +50,8 @@
         "image_size": "auto",
         "image": "shopify://shop_images/d53696e1-cfc6-4955-af3e-3c11d2df3946.png",
         "mobile_image": "shopify://shop_images/Soin_du_visage_avec_gua_sha.png",
-        "mobile_text_position": "place-self-center text-center",
-        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "mobile_text_position": "place-self-end-center text-center",
+        "desktop_text_position": "sm:place-self-end-center sm:text-center",
         "text_color": "#ffffff",
         "overlay_color": "#000000",
         "overlay_opacity": 10
@@ -64,7 +64,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/vogue_0d2782bd-1d73-47bd-89bd-334df51924d2.svg",
-            "logo_width": 200,
+            "logo_width": 300,
             "link": ""
           }
         },
@@ -72,7 +72,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/Cosmopolitan-Logo.png",
-            "logo_width": 200,
+            "logo_width": 300,
             "link": ""
           }
         },
@@ -80,7 +80,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/Design_sans_titre_23.avif",
-            "logo_width": 200,
+            "logo_width": 300,
             "link": ""
           }
         },
@@ -88,7 +88,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/elle_8f537aab-c668-429a-bc19-e409721dc3a0.svg",
-            "logo_width": 90,
+            "logo_width": 180,
             "link": ""
           }
         }
@@ -103,7 +103,7 @@
       "settings": {
         "full_width": true,
         "stack_mobile": true,
-        "title": "As Seen On:",
+        "title": "",
         "content": "",
         "text_alignment": "center",
         "items_per_row": 4,
