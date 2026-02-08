@@ -145,12 +145,6 @@
     "rich_text_bkreWC": {
       "type": "rich-text",
       "blocks": {
-        "subheading_PX74aV": {
-          "type": "subheading",
-          "settings": {
-            "text": ""
-          }
-        },
         "heading_cNEetj": {
           "type": "heading",
           "settings": {
@@ -159,18 +153,10 @@
             "text_color": "",
             "gradient": ""
           }
-        },
-        "richtext_GXT6WQ": {
-          "type": "richtext",
-          "settings": {
-            "content": ""
-          }
         }
       },
       "block_order": [
-        "subheading_PX74aV",
-        "heading_cNEetj",
-        "richtext_GXT6WQ"
+        "heading_cNEetj"
       ],
       "name": "Rich text",
       "settings": {
