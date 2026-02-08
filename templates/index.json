@@ -57,6 +57,32 @@
         "overlay_opacity": 10
       }
     },
+    "rich_text_nHLnqf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WjDFT6": {
+          "type": "heading",
+          "settings": {
+            "text": "Seen on:",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_WjDFT6"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "logo_list_xPKiBq": {
       "type": "logo-list",
       "blocks": {
@@ -687,6 +713,7 @@
   },
   "order": [
     "image_with_text_overlay_ctfJ7C",
+    "rich_text_nHLnqf",
     "logo_list_xPKiBq",
     "rich_text_bkreWC",
     "multiple_images_with_text_xw3UXX",
