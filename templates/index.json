@@ -337,10 +337,10 @@
             "link_style": "link"
           }
         },
-        "item_W6jnMd": {
+        "item_Fczg4G": {
           "type": "item",
           "settings": {
-            "video": "shopify://files/videos/b895832a27684e2da9f19f1921a5e439.HD-1080p-7.2Mbps-58092587.mp4",
+            "video": "shopify://files/videos/ssstik.io_1771017013489.mp4",
             "column_size": "4",
             "title": "",
             "heading_tag": "h4",
@@ -350,10 +350,10 @@
             "link_style": "link"
           }
         },
-        "item_Fczg4G": {
+        "item_W6jnMd": {
           "type": "item",
           "settings": {
-            "video": "shopify://files/videos/ssstik.io_1771017013489.mp4",
+            "video": "shopify://files/videos/b895832a27684e2da9f19f1921a5e439.HD-1080p-7.2Mbps-58092587.mp4",
             "column_size": "4",
             "title": "",
             "heading_tag": "h4",
@@ -367,8 +367,8 @@
       "block_order": [
         "item_kMaahG",
         "item_LNJyg9",
-        "item_W6jnMd",
-        "item_Fczg4G"
+        "item_Fczg4G",
+        "item_W6jnMd"
       ],
       "name": "Multi-column",
       "settings": {
