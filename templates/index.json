@@ -418,7 +418,7 @@
         "text_cN8k9a": {
           "type": "text",
           "settings": {
-            "text": "<p>Valentine’s Day – 50% OFF 🎁</p>"
+            "text": "<p>Valentine’s Day – 60% OFF 🎁</p>"
           }
         },
         "kaching_bundles_app_block_8Am9Jc": {
@@ -527,6 +527,8 @@
         "loox_reviews_loox_agg_section_6jchfb": {
           "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
+            "reviews_to_display": "",
+            "default_tab": "automatic",
             "only_photos": false,
             "hide_thumbnails": false,
             "product_handle": "",
