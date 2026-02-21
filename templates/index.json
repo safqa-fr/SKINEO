@@ -73,6 +73,7 @@
       "block_order": [
         "heading_WjDFT6"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "full_width": true,
@@ -125,6 +126,7 @@
         "logo_CQqKR3",
         "logo_aJfakx"
       ],
+      "disabled": true,
       "name": "Logo list",
       "settings": {
         "full_width": true,
