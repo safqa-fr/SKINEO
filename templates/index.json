@@ -57,6 +57,57 @@
         "overlay_opacity": 10
       }
     },
+    "logo_carousel_custom_cDhxUE": {
+      "type": "logo-carousel-custom",
+      "blocks": {
+        "logo_JcTaD8": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Design_sans_titre_23.avif",
+            "logo_height": 70,
+            "logo_opacity": 85
+          }
+        },
+        "logo_V4GmgT": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/vogue_0d2782bd-1d73-47bd-89bd-334df51924d2.svg",
+            "logo_height": 60,
+            "logo_opacity": 85
+          }
+        },
+        "logo_R4gwTx": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/elle_8f537aab-c668-429a-bc19-e409721dc3a0.svg",
+            "logo_height": 60,
+            "logo_opacity": 85
+          }
+        },
+        "logo_YCPLWM": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Cosmopolitan-Logo.png",
+            "logo_height": 150,
+            "logo_opacity": 85
+          }
+        }
+      },
+      "block_order": [
+        "logo_JcTaD8",
+        "logo_V4GmgT",
+        "logo_R4gwTx",
+        "logo_YCPLWM"
+      ],
+      "name": "Logo carousel",
+      "settings": {
+        "bg_color": "#ffffff",
+        "carousel_width": 100,
+        "speed": 30,
+        "gap": 40,
+        "pause_on_hover": true
+      }
+    },
     "rich_text_nHLnqf": {
       "type": "rich-text",
       "blocks": {
@@ -703,6 +754,7 @@
   },
   "order": [
     "image_with_text_overlay_ctfJ7C",
+    "logo_carousel_custom_cDhxUE",
     "rich_text_nHLnqf",
     "logo_list_xPKiBq",
     "rich_text_bkreWC",
