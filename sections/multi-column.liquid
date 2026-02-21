@@ -6,15 +6,6 @@
       --multi-column-grid: {% if section.settings.stack_on_mobile %}none{% else %}auto / auto-flow 73vw{% endif %};
       --multi-column-list-gap: {% if section.settings.gap == 'small' %}var(--grid-gutter){% elsif section.settings.gap == 'medium' %}var(--spacing-12){% elsif section.settings.gap == 'large' %}var(--spacing-20){% else %}var(--spacing-28){% endif %};
     }
-
-    .video-wrap {
-      overflow: hidden;
-    }
-    .video-wrap video {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
   </style>
 
   <div {% render 'section-properties' %}>
@@ -38,7 +29,7 @@
                    {{ block.shopify_attributes }}>
 
                 {%- if block.settings.video != blank -%}
-                  <div class="video-wrap rounded" style="--aspect-ratio: {{ block.settings.video.aspect_ratio }};">
+                  <video-media autoplay style="--aspect-ratio: {{ block.settings.video.aspect_ratio }}">
                     {{ block.settings.video | video_tag:
                       autoplay: true,
                       loop: true,
@@ -46,10 +37,9 @@
                       playsinline: true,
                       controls: false,
                       preload: 'auto',
-                      class: 'autoplay-video',
-                      poster: ''
+                      class: 'rounded autoplay-video'
                     }}
-                  </div>
+                  </video-media>
 
                 {%- elsif block.settings.image != blank -%}
                   {%- capture sizes -%}(max-width: 699px) calc(73vw - 40px), (max-width: 999px) calc(38vw - 64px), calc(min({{ settings.page_width }}px, 100vw) / {{ block.settings.column_size }}){%- endcapture -%}
@@ -93,7 +83,7 @@
 
   {%- comment -%}
   ------------------------------------------------------------------------------------------------------------------------
-  AUTOPLAY STABLE (scroll horizontal uniquement) + VIDEOS EN LOOP (force autoplay)
+  AUTOPLAY STABLE (scroll horizontal uniquement) + VIDEOS EN LOOP (relance play)
   ------------------------------------------------------------------------------------------------------------------------
   {%- endcomment -%}
 
@@ -102,158 +92,150 @@
     const section = document.getElementById('shopify-section-{{ section.id }}');
     if (!section) return;
 
-    function forcePlay(video) {
-      try {
-        video.muted = true;
-        video.loop = true;
-        video.playsInline = true;
-
-        video.setAttribute('muted', '');
-        video.setAttribute('loop', '');
-        video.setAttribute('playsinline', '');
-        video.setAttribute('autoplay', '');
-
-        const p = video.play();
-        if (p && typeof p.catch === 'function') p.catch(() => {});
-      } catch (e) {}
-    }
-
-    function initAutoplayVideos(root) {
-      const scope = root || document;
-      const videos = scope.querySelectorAll('video.autoplay-video');
-
-      videos.forEach(video => {
-        forcePlay(video);
-
-        video.addEventListener('loadeddata', () => forcePlay(video), { once: true });
-        video.addEventListener('canplay', () => forcePlay(video), { once: true });
-
-        // Si un script du thème met pause, on relance
-        video.addEventListener('pause', () => {
-          if (video.muted) setTimeout(() => forcePlay(video), 150);
-        });
-      });
-
-      if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) forcePlay(entry.target);
-          });
-        }, { threshold: 0.2 });
-
-        videos.forEach(v => io.observe(v));
-      }
-    }
-
-    // Toujours relancer les vidéos
-    initAutoplayVideos(section);
-
-    // AUTOSWITCH horizontal (stable, sans scroll vertical)
     const enabled = {{ section.settings.autoplay | json }};
+    if (!enabled) {
+      // Même si autoplay OFF, on veut que les vidéos loop correctement
+      playAllVideos(section);
+      return;
+    }
+
     const delayMs = ({{ section.settings.autoplay_delay | default: 5 | json }}) * 1000;
     const pauseOnHover = {{ section.settings.pause_on_hover | json }};
 
     const scroller = section.querySelector('.multi-column.scroll-area');
+    if (!scroller) {
+      playAllVideos(section);
+      return;
+    }
 
-    if (enabled && scroller) {
-      const getItems = () => Array.from(scroller.querySelectorAll('.multi-column__item.snap-start'));
+    const getItems = () => Array.from(scroller.querySelectorAll('.multi-column__item.snap-start'));
 
-      let timer = null;
-      let resumeTimer = null;
-      let paused = false;
+    let timer = null;
+    let resumeTimer = null;
+    let paused = false;
 
-      function stop() {
-        if (timer) clearInterval(timer);
-        timer = null;
-      }
+    function stop() {
+      if (timer) clearInterval(timer);
+      timer = null;
+    }
 
-      function pause() {
-        paused = true;
-        stop();
-      }
+    function pause() {
+      paused = true;
+      stop();
+    }
 
-      function resumeAfterIdle() {
-        if (resumeTimer) clearTimeout(resumeTimer);
-        resumeTimer = setTimeout(() => {
-          paused = false;
-          start();
-        }, Math.max(2500, delayMs));
-      }
+    function resumeAfterIdle() {
+      if (resumeTimer) clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(() => {
+        paused = false;
+        start();
+      }, Math.max(2500, delayMs));
+    }
 
-      function userInteract() {
-        pause();
-        resumeAfterIdle();
-      }
+    function userInteract() {
+      pause();
+      resumeAfterIdle();
+    }
 
-      function currentIndex(items) {
-        const left = scroller.scrollLeft;
-        let bestIdx = 0;
-        let bestDist = Infinity;
+    function playAllVideos(scope) {
+      const videos = (scope || document).querySelectorAll('.autoplay-video');
 
-        for (let i = 0; i < items.length; i++) {
-          const dist = Math.abs(items[i].offsetLeft - left);
-          if (dist < bestDist) {
-            bestDist = dist;
-            bestIdx = i;
+      videos.forEach(v => {
+        try {
+          v.muted = true;
+          v.loop = true;
+          v.playsInline = true;
+
+          v.setAttribute('muted', '');
+          v.setAttribute('loop', '');
+          v.setAttribute('playsinline', '');
+          v.setAttribute('autoplay', '');
+
+          if (v.paused) {
+            const p = v.play();
+            if (p && typeof p.catch === 'function') p.catch(()=>{});
           }
+        } catch (e) {}
+      });
+    }
+
+    function currentIndex(items) {
+      const left = scroller.scrollLeft;
+      let bestIdx = 0;
+      let bestDist = Infinity;
+
+      for (let i = 0; i < items.length; i++) {
+        const dist = Math.abs(items[i].offsetLeft - left);
+        if (dist < bestDist) {
+          bestDist = dist;
+          bestIdx = i;
         }
-        return bestIdx;
       }
+      return bestIdx;
+    }
 
-      function goNext() {
-        const items = getItems();
-        if (!items.length) return;
+    function goNext() {
+      const items = getItems();
+      if (!items.length) return;
 
-        // Si tu veux que ça tourne aussi dans l’éditeur Shopify, enlève cette ligne
-        if (window.Shopify && Shopify.designMode) return;
+      // Si tu veux que ça tourne aussi dans l’éditeur Shopify, enlève cette ligne
+      if (window.Shopify && Shopify.designMode) return;
 
-        const idx = currentIndex(items);
-        const nextIdx = (idx + 1) % items.length;
-        const targetLeft = items[nextIdx].offsetLeft;
+      const idx = currentIndex(items);
+      const nextIdx = (idx + 1) % items.length;
 
-        scroller.scrollTo({ left: targetLeft, behavior: 'smooth' });
+      const targetLeft = items[nextIdx].offsetLeft;
 
-        // relance vidéos à chaque switch
-        initAutoplayVideos(section);
-      }
+      // ✅ scroll horizontal du container uniquement (pas de jump en haut)
+      scroller.scrollTo({ left: targetLeft, behavior: 'smooth' });
 
-      function start() {
-        stop();
-        if (paused) return;
-        timer = setInterval(goNext, delayMs);
-      }
+      // ✅ relance vidéos (certaines pauses quand ça bouge)
+      playAllVideos(section);
+    }
 
-      start();
+    function start() {
+      stop();
+      if (paused) return;
+      timer = setInterval(goNext, delayMs);
+    }
 
-      scroller.addEventListener('pointerdown', userInteract, { passive: true });
-      scroller.addEventListener('touchstart', userInteract, { passive: true });
-      scroller.addEventListener('wheel', userInteract, { passive: true });
+    // Start
+    playAllVideos(section);
+    start();
 
-      if (pauseOnHover) {
-        scroller.addEventListener('mouseenter', pause);
-        scroller.addEventListener('mouseleave', () => {
-          paused = false;
-          initAutoplayVideos(section);
-          start();
-        });
-      }
+    // Pause sur interaction utilisateur
+    scroller.addEventListener('pointerdown', userInteract, { passive: true });
+    scroller.addEventListener('touchstart', userInteract, { passive: true });
+    scroller.addEventListener('wheel', userInteract, { passive: true });
 
-      document.addEventListener('shopify:section:unload', function (e) {
-        if (e.detail && e.detail.sectionId === "{{ section.id }}") stop();
+    // IMPORTANT: pas de listener "scroll" -> sinon instable
+    if (pauseOnHover) {
+      scroller.addEventListener('mouseenter', pause);
+      scroller.addEventListener('mouseleave', () => {
+        paused = false;
+        playAllVideos(section);
+        start();
       });
     }
 
     // relance quand onglet revient visible
     document.addEventListener('visibilitychange', () => {
-      if (!document.hidden) initAutoplayVideos(section);
+      if (!document.hidden) playAllVideos(section);
     });
 
     // relance si Shopify re-render une section
     document.addEventListener('shopify:section:load', (e) => {
-      if (e.target && e.target.id === 'shopify-section-{{ section.id }}') {
-        initAutoplayVideos(e.target);
+      if (!e.target) return;
+      if (e.target.id === 'shopify-section-{{ section.id }}') {
+        playAllVideos(e.target);
       }
     });
+
+    // Cleanup
+    document.addEventListener('shopify:section:unload', function (e) {
+      if (e.detail && e.detail.sectionId === "{{ section.id }}") stop();
+    });
+
   })();
   </script>
 {%- endif -%}
