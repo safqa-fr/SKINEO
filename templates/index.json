@@ -456,7 +456,7 @@
         "images_layout": "stacked",
         "collage_images_alignment": "middle",
         "autoplay": true,
-        "autoplay_delay": 6,
+        "autoplay_delay": 10,
         "pause_on_hover": true,
         "background": "",
         "background_gradient": "",
