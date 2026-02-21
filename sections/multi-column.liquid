@@ -16,7 +16,7 @@
         {%- for block in section.blocks -%}
           {%- liquid
             assign loading_strategy = nil
-  
+
             if section.index > 3 or forloop.index > 3
               assign loading_strategy = 'lazy'
             endif
@@ -66,6 +66,122 @@
       </div>
     </div>
   </div>
+
+  {%- comment -%}
+  ------------------------------------------------------------------------------------------------------------------------
+  AUTOPLAY (scroll/switch automatique du multi-column)
+  ------------------------------------------------------------------------------------------------------------------------
+  {%- endcomment -%}
+
+  <script>
+  (function () {
+    const section = document.getElementById('shopify-section-{{ section.id }}');
+    if (!section) return;
+
+    const enabled = {{ section.settings.autoplay | json }};
+    if (!enabled) return;
+
+    const delayMs = ({{ section.settings.autoplay_delay | default: 5 | json }}) * 1000;
+    const pauseOnHover = {{ section.settings.pause_on_hover | json }};
+
+    const scroller = section.querySelector('.multi-column.scroll-area');
+    if (!scroller) return;
+
+    const getItems = () => Array.from(scroller.querySelectorAll('.multi-column__item.snap-start'));
+
+    let timer = null;
+    let resumeTimer = null;
+    let paused = false;
+
+    function stop() {
+      if (timer) clearInterval(timer);
+      timer = null;
+    }
+
+    function pause() {
+      paused = true;
+      stop();
+    }
+
+    function resumeAfterIdle() {
+      if (resumeTimer) clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(() => {
+        paused = false;
+        start();
+      }, Math.max(3000, delayMs));
+    }
+
+    function userInteract() {
+      pause();
+      resumeAfterIdle();
+    }
+
+    function currentIndex(items) {
+      // index de l’item le plus proche du bord gauche visible
+      const left = scroller.scrollLeft;
+      let bestIdx = 0;
+      let bestDist = Infinity;
+
+      for (let i = 0; i < items.length; i++) {
+        const dist = Math.abs(items[i].offsetLeft - left);
+        if (dist < bestDist) {
+          bestDist = dist;
+          bestIdx = i;
+        }
+      }
+      return bestIdx;
+    }
+
+    function goNext() {
+      const items = getItems();
+      if (!items.length) return;
+
+      // évite l’autoplay dans l’éditeur Shopify (sinon ça “saute”)
+      if (window.Shopify && Shopify.designMode) return;
+
+      const idx = currentIndex(items);
+      const nextIdx = (idx + 1) % items.length;
+
+      // Scroll smooth vers l’item suivant (snap garde l’effet “switch”)
+      items[nextIdx].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    }
+
+    function start() {
+      stop();
+      if (paused) return;
+
+      timer = setInterval(goNext, delayMs);
+    }
+
+    // Start autoplay
+    start();
+
+    // Pause si interaction
+    scroller.addEventListener('pointerdown', userInteract, { passive: true });
+    scroller.addEventListener('touchstart', userInteract, { passive: true });
+    scroller.addEventListener('wheel', userInteract, { passive: true });
+
+    // Si l’utilisateur scrolle manuellement, on considère ça comme interaction
+    scroller.addEventListener('scroll', () => {
+      // petit debounce simple
+      userInteract();
+    }, { passive: true });
+
+    // Pause au hover optionnel
+    if (pauseOnHover) {
+      scroller.addEventListener('mouseenter', pause);
+      scroller.addEventListener('mouseleave', () => {
+        paused = false;
+        start();
+      });
+    }
+
+    // Cleanup
+    document.addEventListener('shopify:section:unload', function (e) {
+      if (e.detail && e.detail.sectionId === "{{ section.id }}") stop();
+    });
+  })();
+  </script>
 {%- endif -%}
 
 {% schema %}
@@ -95,22 +211,10 @@
       "id": "gap",
       "label": "Gap spacing",
       "options": [
-        {
-          "value": "small",
-          "label": "Small"
-        },
-        {
-          "value": "medium",
-          "label": "Medium"
-        },
-        {
-          "value": "large",
-          "label": "Large"
-        },
-        {
-        "value": "x-large",
-        "label": "X-Large"
-        }
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" },
+        { "value": "x-large", "label": "X-Large" }
       ],
       "default": "medium"
     },
@@ -119,21 +223,39 @@
       "id": "text_alignment",
       "label": "Text alignment",
       "options": [
-        {
-          "value": "start",
-          "label": "Left"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "end",
-          "label": "Right"
-        }
+        { "value": "start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "end", "label": "Right" }
       ],
       "default": "start"
     },
+
+    {
+      "type": "header",
+      "content": "Autoplay"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto switch",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_delay",
+      "label": "Délai (sec)",
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause au survol",
+      "default": true
+    },
+
     {
       "type": "text",
       "id": "subheading",
@@ -195,22 +317,10 @@
           "id": "column_size",
           "label": "Desktop item size",
           "options": [
-            {
-              "value": "4",
-              "label": "25%"
-            },
-            {
-              "value": "3",
-              "label": "33%"
-            },
-            {
-              "value": "2",
-              "label": "50%"
-            },
-            {
-              "value": "1.5",
-              "label": "66%"
-            }
+            { "value": "4", "label": "25%" },
+            { "value": "3", "label": "33%" },
+            { "value": "2", "label": "50%" },
+            { "value": "1.5", "label": "66%" }
           ],
           "default": "3"
         },
@@ -225,30 +335,12 @@
           "id": "heading_tag",
           "label": "Heading style",
           "options": [
-            {
-              "value": "h1",
-              "label": "X-Large"
-            },
-            {
-              "value": "h2",
-              "label": "Large"
-            },
-            {
-              "value": "h3",
-              "label": "Medium"
-            },
-            {
-              "value": "h4",
-              "label": "Small"
-            },
-            {
-              "value": "h5",
-              "label": "X-Small"
-            },
-            {
-              "value": "h6",
-              "label": "XX-Small"
-            }
+            { "value": "h1", "label": "X-Large" },
+            { "value": "h2", "label": "Large" },
+            { "value": "h3", "label": "Medium" },
+            { "value": "h4", "label": "Small" },
+            { "value": "h5", "label": "X-Small" },
+            { "value": "h6", "label": "XX-Small" }
           ],
           "default": "h4"
         },
@@ -273,14 +365,8 @@
           "id": "link_style",
           "label": "Link style",
           "options": [
-            {
-              "value": "link",
-              "label": "Link"
-            },
-            {
-              "value": "button",
-              "label": "Button"
-            }
+            { "value": "link", "label": "Link" },
+            { "value": "button", "label": "Button" }
           ],
           "default": "link"
         }
@@ -299,22 +385,10 @@
           "id": "column_size",
           "label": "Desktop item size",
           "options": [
-            {
-              "value": "12",
-              "label": "8%"
-            },
-            {
-              "value": "6",
-              "label": "16%"
-            },
-            {
-              "value": "4",
-              "label": "25%"
-            },
-            {
-              "value": "3",
-              "label": "33%"
-            }
+            { "value": "12", "label": "8%" },
+            { "value": "6", "label": "16%" },
+            { "value": "4", "label": "25%" },
+            { "value": "3", "label": "33%" }
           ],
           "default": "12"
         }
@@ -325,18 +399,9 @@
     {
       "name": "Multi-column",
       "blocks": [
-        {
-          "type": "item",
-          "settings": {}
-        },
-        {
-          "type": "item",
-          "settings": {}
-        },
-        {
-          "type": "item",
-          "settings": {}
-        }
+        { "type": "item", "settings": {} },
+        { "type": "item", "settings": {} },
+        { "type": "item", "settings": {} }
       ]
     }
   ]
