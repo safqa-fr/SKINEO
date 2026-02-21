@@ -27,7 +27,7 @@
               <div class="multi-column__item justify-{{ section.settings.text_alignment }} snap-start" style="--multi-column-item-column-count: span {{ 12.0 | divided_by: block.settings.column_size | round }}" {{ block.shopify_attributes }}>
                 {%- if block.settings.video != blank -%}
                   <video-media autoplay style="--aspect-ratio: {{ block.settings.video.aspect_ratio }}">
-                    {{ block.settings.video | video_tag: playsinline: true, muted: true, loop: true, preload: 'metadata', class: 'rounded' }}
+                    {{ block.settings.video | video_tag: playsinline: true, muted: true, loop: true, autoplay: true, preload: 'metadata', class: 'rounded' }}
                   </video-media>
                 {%- elsif block.settings.image != blank -%}
                   {%- capture sizes -%}(max-width: 699px) calc(73vw - 40px), (max-width: 999px) calc(38vw - 64px), calc(min({{ settings.page_width }}px, 100vw) / {{ block.settings.column_size }}){%- endcapture -%}
@@ -69,7 +69,7 @@
 
   {%- comment -%}
   ------------------------------------------------------------------------------------------------------------------------
-  AUTOPLAY (scroll/switch automatique du multi-column)
+  AUTOPLAY STABLE + VIDEO LOOP (pas de scroll vertical, vidéos relancées)
   ------------------------------------------------------------------------------------------------------------------------
   {%- endcomment -%}
 
@@ -108,7 +108,7 @@
       resumeTimer = setTimeout(() => {
         paused = false;
         start();
-      }, Math.max(3000, delayMs));
+      }, Math.max(2500, delayMs));
     }
 
     function userInteract() {
@@ -116,8 +116,28 @@
       resumeAfterIdle();
     }
 
+    function ensureVideosPlaying() {
+      const videos = section.querySelectorAll('video');
+      videos.forEach(v => {
+        try {
+          v.muted = true;
+          v.loop = true;
+          v.playsInline = true;
+
+          v.setAttribute('muted', '');
+          v.setAttribute('loop', '');
+          v.setAttribute('playsinline', '');
+          v.setAttribute('autoplay', '');
+
+          if (v.paused) {
+            const p = v.play();
+            if (p && typeof p.catch === 'function') p.catch(() => {});
+          }
+        } catch (e) {}
+      });
+    }
+
     function currentIndex(items) {
-      // index de l’item le plus proche du bord gauche visible
       const left = scroller.scrollLeft;
       let bestIdx = 0;
       let bestDist = Infinity;
@@ -136,45 +156,47 @@
       const items = getItems();
       if (!items.length) return;
 
-      // évite l’autoplay dans l’éditeur Shopify (sinon ça “saute”)
+      // Si tu veux que ça tourne aussi dans l’éditeur Shopify, enlève la ligne suivante
       if (window.Shopify && Shopify.designMode) return;
 
       const idx = currentIndex(items);
       const nextIdx = (idx + 1) % items.length;
+      const targetLeft = items[nextIdx].offsetLeft;
 
-      // Scroll smooth vers l’item suivant (snap garde l’effet “switch”)
-      items[nextIdx].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      scroller.scrollTo({ left: targetLeft, behavior: 'smooth' });
+      ensureVideosPlaying();
     }
 
     function start() {
       stop();
       if (paused) return;
-
       timer = setInterval(goNext, delayMs);
     }
 
-    // Start autoplay
+    // Start
+    ensureVideosPlaying();
     start();
 
-    // Pause si interaction
+    // Pause sur interaction utilisateur
     scroller.addEventListener('pointerdown', userInteract, { passive: true });
     scroller.addEventListener('touchstart', userInteract, { passive: true });
     scroller.addEventListener('wheel', userInteract, { passive: true });
 
-    // Si l’utilisateur scrolle manuellement, on considère ça comme interaction
-    scroller.addEventListener('scroll', () => {
-      // petit debounce simple
-      userInteract();
-    }, { passive: true });
-
-    // Pause au hover optionnel
+    // IMPORTANT: pas de listener "scroll" -> sinon instable
+    // Pause au hover
     if (pauseOnHover) {
       scroller.addEventListener('mouseenter', pause);
       scroller.addEventListener('mouseleave', () => {
         paused = false;
+        ensureVideosPlaying();
         start();
       });
     }
+
+    // Relance vidéos si l’onglet redevient visible
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) ensureVideosPlaying();
+    });
 
     // Cleanup
     document.addEventListener('shopify:section:unload', function (e) {
