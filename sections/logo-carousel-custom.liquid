@@ -1,0 +1,127 @@
+{% schema %}
+{
+  "name": "Logo carousel custom",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Couleur fond",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "carousel_width",
+      "label": "Largeur (%)",
+      "min": 60,
+      "max": 100,
+      "step": 5,
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "logo_size",
+      "label": "Taille logo",
+      "min": 40,
+      "max": 160,
+      "step": 5,
+      "default": 90
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Vitesse animation",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "default": 30
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Image logo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo carousel custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="logo-carousel-wrapper" style="background: {{ section.settings.bg_color }};">
+  <div class="logo-carousel" style="max-width: {{ section.settings.carousel_width }}%;">
+
+    <div class="logo-track">
+      {% for block in section.blocks %}
+        <div class="logo-item">
+          <img
+            src="{{ block.settings.logo | image_url }}"
+            style="height: {{ section.settings.logo_size }}px;"
+            loading="lazy"
+          >
+        </div>
+      {% endfor %}
+
+      {% for block in section.blocks %}
+        <div class="logo-item">
+          <img
+            src="{{ block.settings.logo | image_url }}"
+            style="height: {{ section.settings.logo_size }}px;"
+            loading="lazy"
+          >
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+<style>
+.logo-carousel-wrapper {
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+.logo-carousel {
+  margin: auto;
+  overflow: hidden;
+}
+
+.logo-track {
+  display: flex;
+  gap: 50px;
+  width: max-content;
+  animation: scroll linear infinite;
+  animation-duration: {{ section.settings.speed }}s;
+}
+
+.logo-item img {
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+.logo-item img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media(max-width:768px){
+  .logo-track{
+    gap:25px;
+  }
+}
+</style>
