@@ -135,6 +135,94 @@ LIQUID
   </multiple-images-with-text>
 </div>
 
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+AUTOPLAY (change le texte tout seul si personne n'interagit)
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+<script>
+(function () {
+  const section = document.getElementById('shopify-section-{{ section.id }}');
+  if (!section) return;
+
+  const autoplayEnabled = {{ section.settings.autoplay | json }};
+  if (!autoplayEnabled) return;
+
+  const delay = ({{ section.settings.autoplay_delay | default: 5 | json }}) * 1000;
+  const pauseOnHover = {{ section.settings.pause_on_hover | json }};
+
+  const nextBtn = section.querySelector('button[is="next-button"]');
+  const prevBtn = section.querySelector('button[is="prev-button"]');
+  if (!nextBtn) return;
+
+  let interval = null;
+  let resumeTimeout = null;
+  let paused = false;
+
+  function stop() {
+    if (interval) clearInterval(interval);
+    interval = null;
+  }
+
+  function start() {
+    stop();
+    if (paused) return;
+
+    interval = setInterval(function () {
+      // évite l'autoplay pendant l'édition dans l'éditeur Shopify
+      if (window.Shopify && Shopify.designMode) return;
+      nextBtn.click();
+    }, delay);
+  }
+
+  function pause() {
+    paused = true;
+    stop();
+  }
+
+  function resumeAfterIdle() {
+    if (resumeTimeout) clearTimeout(resumeTimeout);
+
+    resumeTimeout = setTimeout(function () {
+      paused = false;
+      start();
+    }, Math.max(3000, delay));
+  }
+
+  function userInteraction() {
+    pause();
+    resumeAfterIdle();
+  }
+
+  // Start autoplay
+  start();
+
+  // Buttons interaction
+  if (prevBtn) prevBtn.addEventListener('click', userInteraction);
+  nextBtn.addEventListener('click', userInteraction);
+
+  // Touch / pointer / scroll
+  section.addEventListener('pointerdown', userInteraction, { passive: true });
+  section.addEventListener('touchstart', userInteraction, { passive: true });
+  section.addEventListener('wheel', userInteraction, { passive: true });
+
+  // Hover pause (optionnel)
+  if (pauseOnHover) {
+    section.addEventListener('mouseenter', pause);
+    section.addEventListener('mouseleave', function () {
+      paused = false;
+      start();
+    });
+  }
+
+  // Cleanup Shopify reload
+  document.addEventListener('shopify:section:unload', function (e) {
+    if (e.detail && e.detail.sectionId === "{{ section.id }}") stop();
+  });
+})();
+</script>
+
 {% schema %}
 {
   "name": "Multiple images with text",
@@ -157,18 +245,9 @@ LIQUID
       "id": "images_layout",
       "label": "Images layout",
       "options": [
-        {
-          "value": "stacked",
-          "label": "Stacked"
-        },
-        {
-          "value": "collage",
-          "label": "Collage"
-        },
-        {
-          "value": "scattered",
-          "label": "Scattered"
-        }
+        { "value": "stacked", "label": "Stacked" },
+        { "value": "collage", "label": "Collage" },
+        { "value": "scattered", "label": "Scattered" }
       ],
       "default": "stacked"
     },
@@ -177,21 +256,39 @@ LIQUID
       "id": "collage_images_alignment",
       "label": "Collage images alignment",
       "options": [
-        {
-          "value": "top",
-          "label": "Top"
-        },
-        {
-          "value": "middle",
-          "label": "Middle"
-        },
-        {
-          "value": "shifted",
-          "label": "Shifted"
-        }
+        { "value": "top", "label": "Top" },
+        { "value": "middle", "label": "Middle" },
+        { "value": "shifted", "label": "Shifted" }
       ],
       "default": "middle"
     },
+
+    {
+      "type": "header",
+      "content": "Autoplay"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto changer texte",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_delay",
+      "label": "Délai auto (sec)",
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause au survol",
+      "default": true
+    },
+
     {
       "type": "header",
       "content": "Colors",
