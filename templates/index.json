@@ -634,7 +634,7 @@
         "gap": "medium",
         "text_alignment": "center",
         "autoplay": true,
-        "autoplay_delay": 7,
+        "autoplay_delay": 4,
         "pause_on_hover": false,
         "subheading": "",
         "title": "They say it better than we do",
