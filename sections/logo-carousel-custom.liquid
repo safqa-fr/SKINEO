@@ -3,10 +3,20 @@
   "name": "Logo carousel",
   "settings": [
     { "type": "color", "id": "bg_color", "label": "Couleur fond", "default": "#ffffff" },
+
+    {
+      "type": "range",
+      "id": "section_height",
+      "label": "Hauteur du fond (px)",
+      "min": 40,
+      "max": 200,
+      "step": 5,
+      "default": 90
+    },
+
     { "type": "range", "id": "carousel_width", "label": "Largeur (%)", "min": 60, "max": 100, "step": 5, "default": 100 },
     { "type": "range", "id": "speed", "label": "Vitesse (sec)", "min": 10, "max": 70, "step": 5, "default": 30 },
-    { "type": "range", "id": "gap", "label": "Espace (px)", "min": 10, "max": 80, "step": 5, "default": 40 },
-    { "type": "checkbox", "id": "pause_on_hover", "label": "Pause au survol", "default": true }
+    { "type": "range", "id": "gap", "label": "Espace (px)", "min": 10, "max": 80, "step": 5, "default": 40 }
   ],
   "blocks": [
     {
@@ -17,40 +27,43 @@
         {
           "type": "range",
           "id": "logo_height",
-          "label": "Taille logo (px)",
+          "label": "Hauteur logo (px)",
           "min": 20,
           "max": 220,
           "step": 2,
-          "default": 70
+          "default": 60
         },
         {
           "type": "range",
-          "id": "logo_opacity",
-          "label": "Opacité",
+          "id": "logo_max_width",
+          "label": "Largeur max logo (px)",
           "min": 40,
-          "max": 100,
+          "max": 400,
           "step": 5,
-          "default": 85
+          "default": 160
         }
       ]
     }
   ],
-  "presets": [
-    { "name": "Logo carousel" }
-  ]
+  "presets": [{ "name": "Logo carousel" }]
 }
 {% endschema %}
 
-<div class="lc-wrap" style="background: {{ section.settings.bg_color }};">
+<div class="lc-wrap"
+     style="
+       background: {{ section.settings.bg_color }};
+       height: {{ section.settings.section_height }}px;
+     ">
+
   <div class="lc-inner" style="max-width: {{ section.settings.carousel_width }}%;">
 
-    <div class="lc-track" aria-label="Logo carousel">
+    <div class="lc-track">
       {% for block in section.blocks %}
         {% if block.settings.logo != blank %}
           <div class="lc-item" {{ block.shopify_attributes }}>
             <img
-              src="{{ block.settings.logo | image_url: width: 800 }}"
-              style="height: {{ block.settings.logo_height }}px; opacity: {{ block.settings.logo_opacity | divided_by: 100.0 }};"
+              src="{{ block.settings.logo | image_url: width: 900 }}"
+              style="height: {{ block.settings.logo_height }}px; max-width: {{ block.settings.logo_max_width }}px;"
               loading="lazy"
               alt=""
             >
@@ -62,8 +75,8 @@
         {% if block.settings.logo != blank %}
           <div class="lc-item">
             <img
-              src="{{ block.settings.logo | image_url: width: 800 }}"
-              style="height: {{ block.settings.logo_height }}px; opacity: {{ block.settings.logo_opacity | divided_by: 100.0 }};"
+              src="{{ block.settings.logo | image_url: width: 900 }}"
+              style="height: {{ block.settings.logo_height }}px; max-width: {{ block.settings.logo_max_width }}px;"
               loading="lazy"
               alt=""
             >
@@ -76,35 +89,35 @@
 </div>
 
 <style>
-  .lc-wrap{ padding: 28px 0; overflow: hidden; }
-  .lc-inner{ margin: 0 auto; overflow: hidden; }
-  .lc-track{
-    display:flex;
-    align-items:center;
-    gap: {{ section.settings.gap }}px;
-    width:max-content;
-    animation: lc_scroll linear infinite;
-    animation-duration: {{ section.settings.speed }}s;
-    will-change: transform;
-  }
-  .lc-item{ flex: 0 0 auto; display:flex; align-items:center; justify-content:center; }
-  .lc-item img{
-    width:auto;
-    display:block;
-    transition: transform .25s ease, opacity .25s ease;
-  }
-  .lc-item img:hover{ transform: scale(1.05); opacity: 1 !important; }
+.lc-wrap{
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+}
 
-  @keyframes lc_scroll{
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
+.lc-inner{ margin:auto; overflow:hidden; width:100%; }
 
-  {% if section.settings.pause_on_hover %}
-  .lc-wrap:hover .lc-track{ animation-play-state: paused; }
-  {% endif %}
+.lc-track{
+  display:flex;
+  align-items:center;
+  gap: {{ section.settings.gap }}px;
+  width:max-content;
+  animation: scroll linear infinite;
+  animation-duration: {{ section.settings.speed }}s;
+}
 
-  @media (max-width: 768px){
-    .lc-wrap{ padding: 18px 0; }
-  }
+.lc-item{ flex:0 0 auto; display:flex; align-items:center; }
+
+.lc-item img{
+  width:auto;
+  object-fit:contain;
+  transition:.25s;
+}
+
+.lc-item img:hover{ transform:scale(1.05); }
+
+@keyframes scroll{
+  from{ transform:translateX(0);}
+  to{ transform:translateX(-50%);}
+}
 </style>
