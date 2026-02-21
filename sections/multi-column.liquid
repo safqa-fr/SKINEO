@@ -24,11 +24,23 @@
 
           {%- case block.type -%}
             {%- when 'item' -%}
-              <div class="multi-column__item justify-{{ section.settings.text_alignment }} snap-start" style="--multi-column-item-column-count: span {{ 12.0 | divided_by: block.settings.column_size | round }}" {{ block.shopify_attributes }}>
+              <div class="multi-column__item justify-{{ section.settings.text_alignment }} snap-start"
+                   style="--multi-column-item-column-count: span {{ 12.0 | divided_by: block.settings.column_size | round }}"
+                   {{ block.shopify_attributes }}>
+
                 {%- if block.settings.video != blank -%}
                   <video-media autoplay style="--aspect-ratio: {{ block.settings.video.aspect_ratio }}">
-                    {{ block.settings.video | video_tag: playsinline: true, muted: true, loop: true, autoplay: true, preload: 'metadata', class: 'rounded' }}
+                    {{ block.settings.video | video_tag:
+                      autoplay: true,
+                      loop: true,
+                      muted: true,
+                      playsinline: true,
+                      controls: false,
+                      preload: 'auto',
+                      class: 'rounded autoplay-video'
+                    }}
                   </video-media>
+
                 {%- elsif block.settings.image != blank -%}
                   {%- capture sizes -%}(max-width: 699px) calc(73vw - 40px), (max-width: 999px) calc(38vw - 64px), calc(min({{ settings.page_width }}px, 100vw) / {{ block.settings.column_size }}){%- endcapture -%}
                   {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: loading_strategy, sizes: sizes, widths: '300,400,500,600,800,1000,1200,1400,1600,1800', class: 'rounded' -}}
@@ -60,7 +72,9 @@
               </div>
 
             {%- when 'spacer' -%}
-              <div class="multi-column__item hidden md:block" style="--multi-column-item-column-count: span {{ 12.0 | divided_by: block.settings.column_size | round }}" {{ block.shopify_attributes }}></div>
+              <div class="multi-column__item hidden md:block"
+                   style="--multi-column-item-column-count: span {{ 12.0 | divided_by: block.settings.column_size | round }}"
+                   {{ block.shopify_attributes }}></div>
           {%- endcase -%}
         {%- endfor -%}
       </div>
@@ -69,7 +83,7 @@
 
   {%- comment -%}
   ------------------------------------------------------------------------------------------------------------------------
-  AUTOPLAY STABLE + VIDEO LOOP (pas de scroll vertical, vidéos relancées)
+  AUTOPLAY STABLE (scroll horizontal uniquement) + VIDEOS EN LOOP (relance play)
   ------------------------------------------------------------------------------------------------------------------------
   {%- endcomment -%}
 
@@ -79,13 +93,20 @@
     if (!section) return;
 
     const enabled = {{ section.settings.autoplay | json }};
-    if (!enabled) return;
+    if (!enabled) {
+      // Même si autoplay OFF, on veut que les vidéos loop correctement
+      playAllVideos(section);
+      return;
+    }
 
     const delayMs = ({{ section.settings.autoplay_delay | default: 5 | json }}) * 1000;
     const pauseOnHover = {{ section.settings.pause_on_hover | json }};
 
     const scroller = section.querySelector('.multi-column.scroll-area');
-    if (!scroller) return;
+    if (!scroller) {
+      playAllVideos(section);
+      return;
+    }
 
     const getItems = () => Array.from(scroller.querySelectorAll('.multi-column__item.snap-start'));
 
@@ -116,8 +137,9 @@
       resumeAfterIdle();
     }
 
-    function ensureVideosPlaying() {
-      const videos = section.querySelectorAll('video');
+    function playAllVideos(scope) {
+      const videos = (scope || document).querySelectorAll('.autoplay-video');
+
       videos.forEach(v => {
         try {
           v.muted = true;
@@ -131,7 +153,7 @@
 
           if (v.paused) {
             const p = v.play();
-            if (p && typeof p.catch === 'function') p.catch(() => {});
+            if (p && typeof p.catch === 'function') p.catch(()=>{});
           }
         } catch (e) {}
       });
@@ -156,15 +178,19 @@
       const items = getItems();
       if (!items.length) return;
 
-      // Si tu veux que ça tourne aussi dans l’éditeur Shopify, enlève la ligne suivante
+      // Si tu veux que ça tourne aussi dans l’éditeur Shopify, enlève cette ligne
       if (window.Shopify && Shopify.designMode) return;
 
       const idx = currentIndex(items);
       const nextIdx = (idx + 1) % items.length;
+
       const targetLeft = items[nextIdx].offsetLeft;
 
+      // ✅ scroll horizontal du container uniquement (pas de jump en haut)
       scroller.scrollTo({ left: targetLeft, behavior: 'smooth' });
-      ensureVideosPlaying();
+
+      // ✅ relance vidéos (certaines pauses quand ça bouge)
+      playAllVideos(section);
     }
 
     function start() {
@@ -174,7 +200,7 @@
     }
 
     // Start
-    ensureVideosPlaying();
+    playAllVideos(section);
     start();
 
     // Pause sur interaction utilisateur
@@ -183,25 +209,33 @@
     scroller.addEventListener('wheel', userInteract, { passive: true });
 
     // IMPORTANT: pas de listener "scroll" -> sinon instable
-    // Pause au hover
     if (pauseOnHover) {
       scroller.addEventListener('mouseenter', pause);
       scroller.addEventListener('mouseleave', () => {
         paused = false;
-        ensureVideosPlaying();
+        playAllVideos(section);
         start();
       });
     }
 
-    // Relance vidéos si l’onglet redevient visible
+    // relance quand onglet revient visible
     document.addEventListener('visibilitychange', () => {
-      if (!document.hidden) ensureVideosPlaying();
+      if (!document.hidden) playAllVideos(section);
+    });
+
+    // relance si Shopify re-render une section
+    document.addEventListener('shopify:section:load', (e) => {
+      if (!e.target) return;
+      if (e.target.id === 'shopify-section-{{ section.id }}') {
+        playAllVideos(e.target);
+      }
     });
 
     // Cleanup
     document.addEventListener('shopify:section:unload', function (e) {
       if (e.detail && e.detail.sectionId === "{{ section.id }}") stop();
     });
+
   })();
   </script>
 {%- endif -%}
