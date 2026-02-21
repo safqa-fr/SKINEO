@@ -2,122 +2,65 @@
 {
   "name": "Logo carousel custom",
   "settings": [
-    {
-      "type": "color",
-      "id": "bg_color",
-      "label": "Couleur fond",
-      "default": "#ffffff"
-    },
-    {
-      "type": "range",
-      "id": "carousel_width",
-      "label": "Largeur (%)",
-      "min": 60,
-      "max": 100,
-      "step": 5,
-      "default": 100
-    },
-    {
-      "type": "range",
-      "id": "default_logo_size",
-      "label": "Taille logo globale (px)",
-      "min": 30,
-      "max": 180,
-      "step": 5,
-      "default": 90
-    },
-    {
-      "type": "range",
-      "id": "speed",
-      "label": "Vitesse animation (sec)",
-      "min": 10,
-      "max": 60,
-      "step": 5,
-      "default": 30
-    },
-    {
-      "type": "range",
-      "id": "gap",
-      "label": "Espace entre logos (px)",
-      "min": 10,
-      "max": 80,
-      "step": 5,
-      "default": 40
-    }
+    { "type": "color", "id": "bg_color", "label": "Couleur fond", "default": "#ffffff" },
+    { "type": "range", "id": "carousel_width", "label": "Largeur (%)", "min": 60, "max": 100, "step": 5, "default": 100 },
+    { "type": "range", "id": "base_logo_size", "label": "Taille base logos (px)", "min": 40, "max": 180, "step": 5, "default": 90 },
+    { "type": "range", "id": "speed", "label": "Vitesse animation", "min": 10, "max": 60, "step": 5, "default": 30 },
+    { "type": "range", "id": "gap", "label": "Espace logos", "min": 10, "max": 80, "step": 5, "default": 40 }
   ],
   "blocks": [
     {
       "type": "logo",
       "name": "Logo",
       "settings": [
-        {
-          "type": "image_picker",
-          "id": "logo",
-          "label": "Image logo"
-        },
-        {
-          "type": "checkbox",
-          "id": "use_global_size",
-          "label": "Utiliser taille globale",
-          "default": true
-        },
+        { "type": "image_picker", "id": "logo", "label": "Image logo" },
         {
           "type": "range",
-          "id": "logo_size",
-          "label": "Taille de CE logo (px)",
-          "min": 30,
-          "max": 220,
+          "id": "scale",
+          "label": "Taille de CE logo (%)",
+          "min": 50,
+          "max": 200,
           "step": 5,
-          "default": 90
+          "default": 100
         }
       ]
     }
   ],
-  "presets": [
-    {
-      "name": "Logo carousel custom"
-    }
-  ]
+  "presets": [{ "name": "Logo carousel custom" }]
 }
 {% endschema %}
 
 <div class="logo-carousel-wrapper" style="background: {{ section.settings.bg_color }};">
   <div class="logo-carousel" style="max-width: {{ section.settings.carousel_width }}%;">
 
-    <div class="logo-track" aria-label="Logo carousel">
+    <div class="logo-track">
       {% for block in section.blocks %}
-        {% assign size = section.settings.default_logo_size %}
-        {% unless block.settings.use_global_size %}
-          {% assign size = block.settings.logo_size %}
-        {% endunless %}
+        {% assign size = section.settings.base_logo_size | times: block.settings.scale | divided_by: 100 %}
 
         {% if block.settings.logo != blank %}
-          <div class="logo-item" {{ block.shopify_attributes }}>
-            <img
-              src="{{ block.settings.logo | image_url: width: 600 }}"
-              style="height: {{ size }}px;"
-              loading="lazy"
-              alt="Logo"
-            >
-          </div>
+        <div class="logo-item" {{ block.shopify_attributes }}>
+          <img
+            src="{{ block.settings.logo | image_url: width: 600 }}"
+            style="height: {{ size }}px;"
+            loading="lazy"
+            alt="logo"
+          >
+        </div>
         {% endif %}
       {% endfor %}
 
       {% for block in section.blocks %}
-        {% assign size = section.settings.default_logo_size %}
-        {% unless block.settings.use_global_size %}
-          {% assign size = block.settings.logo_size %}
-        {% endunless %}
+        {% assign size = section.settings.base_logo_size | times: block.settings.scale | divided_by: 100 %}
 
         {% if block.settings.logo != blank %}
-          <div class="logo-item" {{ block.shopify_attributes }}>
-            <img
-              src="{{ block.settings.logo | image_url: width: 600 }}"
-              style="height: {{ size }}px;"
-              loading="lazy"
-              alt="Logo"
-            >
-          </div>
+        <div class="logo-item">
+          <img
+            src="{{ block.settings.logo | image_url: width: 600 }}"
+            style="height: {{ size }}px;"
+            loading="lazy"
+            alt="logo"
+          >
+        </div>
         {% endif %}
       {% endfor %}
     </div>
@@ -126,51 +69,33 @@
 </div>
 
 <style>
-  .logo-carousel-wrapper{
-    padding: 30px 0;
-    overflow: hidden;
-  }
-  .logo-carousel{
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  .logo-track{
-    display:flex;
-    align-items:center;
-    gap: {{ section.settings.gap }}px;
-    width:max-content;
-    animation: logo_scroll linear infinite;
-    animation-duration: {{ section.settings.speed }}s;
-    will-change: transform;
-  }
-  .logo-item{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex: 0 0 auto;
-  }
-  .logo-item img{
-    display:block;
-    width:auto;
-    opacity:0.85;
-    transition: transform .25s ease, opacity .25s ease;
-  }
-  .logo-item img:hover{
-    opacity:1;
-    transform: scale(1.05);
-  }
+.logo-carousel-wrapper{ padding:30px 0; overflow:hidden; }
+.logo-carousel{ margin:auto; overflow:hidden; }
+.logo-track{
+  display:flex;
+  align-items:center;
+  gap: {{ section.settings.gap }}px;
+  width:max-content;
+  animation: scroll linear infinite;
+  animation-duration: {{ section.settings.speed }}s;
+}
+.logo-item{ flex:0 0 auto; display:flex; align-items:center; }
+.logo-item img{
+  width:auto;
+  opacity:.85;
+  transition:.25s;
+}
+.logo-item img:hover{
+  opacity:1;
+  transform:scale(1.05);
+}
 
-  @keyframes logo_scroll{
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
+@keyframes scroll{
+  from{ transform:translateX(0);}
+  to{ transform:translateX(-50%);}
+}
 
-  @media (max-width: 768px){
-    .logo-carousel-wrapper{ padding: 20px 0; }
-  }
-
-  /* Optionnel: pause au hover */
-  .logo-carousel-wrapper:hover .logo-track{
-    animation-play-state: paused;
-  }
+.logo-carousel-wrapper:hover .logo-track{
+  animation-play-state: paused;
+}
 </style>
