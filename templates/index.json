@@ -101,7 +101,7 @@
       ],
       "name": "Logo carousel",
       "settings": {
-        "bg_color": "#ffffff",
+        "bg_color": "#6e4a2f",
         "carousel_width": 100,
         "speed": 30,
         "gap": 40,
