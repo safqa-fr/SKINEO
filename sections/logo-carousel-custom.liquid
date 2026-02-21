@@ -19,21 +19,30 @@
     },
     {
       "type": "range",
-      "id": "logo_size",
-      "label": "Taille logo",
-      "min": 40,
-      "max": 160,
+      "id": "default_logo_size",
+      "label": "Taille logo globale (px)",
+      "min": 30,
+      "max": 180,
       "step": 5,
       "default": 90
     },
     {
       "type": "range",
       "id": "speed",
-      "label": "Vitesse animation",
+      "label": "Vitesse animation (sec)",
       "min": 10,
       "max": 60,
       "step": 5,
       "default": 30
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Espace entre logos (px)",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "default": 40
     }
   ],
   "blocks": [
@@ -45,6 +54,21 @@
           "type": "image_picker",
           "id": "logo",
           "label": "Image logo"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_global_size",
+          "label": "Utiliser taille globale",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "logo_size",
+          "label": "Taille de CE logo (px)",
+          "min": 30,
+          "max": 220,
+          "step": 5,
+          "default": 90
         }
       ]
     }
@@ -60,25 +84,41 @@
 <div class="logo-carousel-wrapper" style="background: {{ section.settings.bg_color }};">
   <div class="logo-carousel" style="max-width: {{ section.settings.carousel_width }}%;">
 
-    <div class="logo-track">
+    <div class="logo-track" aria-label="Logo carousel">
       {% for block in section.blocks %}
-        <div class="logo-item">
-          <img
-            src="{{ block.settings.logo | image_url }}"
-            style="height: {{ section.settings.logo_size }}px;"
-            loading="lazy"
-          >
-        </div>
+        {% assign size = section.settings.default_logo_size %}
+        {% unless block.settings.use_global_size %}
+          {% assign size = block.settings.logo_size %}
+        {% endunless %}
+
+        {% if block.settings.logo != blank %}
+          <div class="logo-item" {{ block.shopify_attributes }}>
+            <img
+              src="{{ block.settings.logo | image_url: width: 600 }}"
+              style="height: {{ size }}px;"
+              loading="lazy"
+              alt="Logo"
+            >
+          </div>
+        {% endif %}
       {% endfor %}
 
       {% for block in section.blocks %}
-        <div class="logo-item">
-          <img
-            src="{{ block.settings.logo | image_url }}"
-            style="height: {{ section.settings.logo_size }}px;"
-            loading="lazy"
-          >
-        </div>
+        {% assign size = section.settings.default_logo_size %}
+        {% unless block.settings.use_global_size %}
+          {% assign size = block.settings.logo_size %}
+        {% endunless %}
+
+        {% if block.settings.logo != blank %}
+          <div class="logo-item" {{ block.shopify_attributes }}>
+            <img
+              src="{{ block.settings.logo | image_url: width: 600 }}"
+              style="height: {{ size }}px;"
+              loading="lazy"
+              alt="Logo"
+            >
+          </div>
+        {% endif %}
       {% endfor %}
     </div>
 
@@ -86,42 +126,51 @@
 </div>
 
 <style>
-.logo-carousel-wrapper {
-  padding: 30px 0;
-  overflow: hidden;
-}
-
-.logo-carousel {
-  margin: auto;
-  overflow: hidden;
-}
-
-.logo-track {
-  display: flex;
-  gap: 50px;
-  width: max-content;
-  animation: scroll linear infinite;
-  animation-duration: {{ section.settings.speed }}s;
-}
-
-.logo-item img {
-  opacity: 0.85;
-  transition: 0.3s;
-}
-
-.logo-item img:hover {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-@media(max-width:768px){
-  .logo-track{
-    gap:25px;
+  .logo-carousel-wrapper{
+    padding: 30px 0;
+    overflow: hidden;
   }
-}
+  .logo-carousel{
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .logo-track{
+    display:flex;
+    align-items:center;
+    gap: {{ section.settings.gap }}px;
+    width:max-content;
+    animation: logo_scroll linear infinite;
+    animation-duration: {{ section.settings.speed }}s;
+    will-change: transform;
+  }
+  .logo-item{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex: 0 0 auto;
+  }
+  .logo-item img{
+    display:block;
+    width:auto;
+    opacity:0.85;
+    transition: transform .25s ease, opacity .25s ease;
+  }
+  .logo-item img:hover{
+    opacity:1;
+    transform: scale(1.05);
+  }
+
+  @keyframes logo_scroll{
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @media (max-width: 768px){
+    .logo-carousel-wrapper{ padding: 20px 0; }
+  }
+
+  /* Optionnel: pause au hover */
+  .logo-carousel-wrapper:hover .logo-track{
+    animation-play-state: paused;
+  }
 </style>
