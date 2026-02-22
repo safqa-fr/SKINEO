@@ -140,7 +140,7 @@
         "bg_color": "#f3e8dc",
         "section_height": 90,
         "carousel_width": 100,
-        "speed": 30,
+        "speed": 20,
         "gap": 40
       }
     },
