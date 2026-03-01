@@ -712,7 +712,7 @@
           "type": "tab",
           "settings": {
             "title": "Free Delivery to Your Door",
-            "content": "<p><strong>Free home delivery is included. </strong>Depending on the volume of orders being processed, delivery is estimated between <strong>5 and 7 business days</strong>.<br/><br/></p>",
+            "content": "<p><strong>Free home delivery is included. </strong>Depending on the volume of orders being processed, delivery is estimated between <strong>5 and 12 business days</strong>.<br/><br/></p>",
             "page": ""
           }
         },
