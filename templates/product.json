@@ -123,6 +123,18 @@
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
+        },
+        "pickup_availability_cxUDFw": {
+          "type": "pickup_availability",
+          "settings": {}
+        },
+        "image_Pk7phn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_30_dec._2025_22_27_12-Photoroom_e8b9d033-7556-4351-873f-56fde39fbe00.png",
+            "alignment": "center",
+            "max_width": 300
+          }
         }
       },
       "block_order": [
@@ -140,7 +152,9 @@
         "variant_picker",
         "quantity_selector",
         "liquid_UQa9CR",
-        "buy_buttons"
+        "buy_buttons",
+        "pickup_availability_cxUDFw",
+        "image_Pk7phn"
       ],
       "settings": {
         "full_width": true,
