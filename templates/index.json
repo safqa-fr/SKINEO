@@ -209,7 +209,7 @@
         "text_cN8k9a": {
           "type": "text",
           "settings": {
-            "text": "<p>Winter Sale — Up to 50% Off 🎁</p>"
+            "text": "<p>🌸Women’s Day Sale — Up to 50% OFF🌸</p>"
           }
         },
         "kaching_bundles_app_block_8Am9Jc": {
@@ -272,7 +272,6 @@
         "image_R3wAFc": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_28_dec._2025_21_18_08-Photoroom_26172d47-85b1-45c5-abb7-a8d20106707a.png",
             "alignment": "center",
             "max_width": 300
           }
