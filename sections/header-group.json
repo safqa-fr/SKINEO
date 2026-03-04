@@ -17,7 +17,7 @@
         "message_i7UL7J": {
           "type": "message",
           "settings": {
-            "text": "💘 Winter Sale — Up to 50% Off 💘",
+            "text": "🌸Women’s Day Sale — Up to 50% OFF🌸",
             "url": ""
           }
         },
@@ -66,7 +66,6 @@
       "settings": {
         "enable_sticky": true,
         "hide_on_scroll": false,
-        "logo": "shopify://shop_images/ChatGPT_Image_28_dec._2025_14_42_37.png",
         "logo_max_width": 125,
         "logo_mobile_max_width": 100,
         "menu": "main-menu-1",
