@@ -48,7 +48,7 @@
         "allow_transparent_header": false,
         "enable_parallax": false,
         "image_size": "auto",
-        "image": "shopify://shop_images/d53696e1-cfc6-4955-af3e-3c11d2df3946.png",
+        "image": "shopify://shop_images/lymphatic-drainage-face-brush.webp",
         "mobile_image": "shopify://shop_images/Soin_du_visage_avec_gua_sha.png",
         "mobile_text_position": "place-self-end-center text-center",
         "desktop_text_position": "sm:place-self-end-center sm:text-center",
@@ -63,7 +63,6 @@
         "logo_7FiMD9": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Design_sans_titre_23.avif",
             "logo_height": 40,
             "logo_max_width": 160
           }
@@ -71,7 +70,6 @@
         "logo_bkHGYm": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/vogue_0d2782bd-1d73-47bd-89bd-334df51924d2.svg",
             "logo_height": 30,
             "logo_max_width": 160
           }
@@ -79,7 +77,6 @@
         "logo_cMpLiz": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/elle_8f537aab-c668-429a-bc19-e409721dc3a0.svg",
             "logo_height": 30,
             "logo_max_width": 160
           }
@@ -87,7 +84,6 @@
         "logo_3QVAXK": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Cosmopolitan-Logo.png",
             "logo_height": 100,
             "logo_max_width": 160
           }
@@ -95,7 +91,6 @@
         "logo_JcTaD8": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Design_sans_titre_23.avif",
             "logo_height": 40,
             "logo_max_width": 160
           }
@@ -103,7 +98,6 @@
         "logo_V4GmgT": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/vogue_0d2782bd-1d73-47bd-89bd-334df51924d2.svg",
             "logo_height": 30,
             "logo_max_width": 160
           }
@@ -111,7 +105,6 @@
         "logo_R4gwTx": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/elle_8f537aab-c668-429a-bc19-e409721dc3a0.svg",
             "logo_height": 30,
             "logo_max_width": 160
           }
@@ -119,7 +112,6 @@
         "logo_YCPLWM": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Cosmopolitan-Logo.png",
             "logo_height": 100,
             "logo_max_width": 160
           }
@@ -353,7 +345,6 @@
         "logo_7A8efk": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/vogue_0d2782bd-1d73-47bd-89bd-334df51924d2.svg",
             "logo_width": 300,
             "link": ""
           }
@@ -361,7 +352,6 @@
         "logo_f6EjY6": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Cosmopolitan-Logo.png",
             "logo_width": 300,
             "link": ""
           }
@@ -369,7 +359,6 @@
         "logo_CQqKR3": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Design_sans_titre_23.avif",
             "logo_width": 300,
             "link": ""
           }
@@ -377,7 +366,6 @@
         "logo_aJfakx": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/elle_8f537aab-c668-429a-bc19-e409721dc3a0.svg",
             "logo_width": 180,
             "link": ""
           }
@@ -487,8 +475,6 @@
         "subheading": "",
         "title": "Before & After Results",
         "content": "<p>Expert-Approved.<br/>We don’t make promises. We show real results.</p>",
-        "before_image": "shopify://shop_images/0a7934ad-56eb-4c85-bcaf-128b4bbfcbfe.webp",
-        "after_image": "shopify://shop_images/4e95e876-e167-40c7-93f1-942ade29db1b.webp",
         "expand_image": false,
         "text_position": "center",
         "before_after_text_position": "top",
