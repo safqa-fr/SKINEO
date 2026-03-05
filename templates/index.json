@@ -60,34 +60,6 @@
     "logo_carousel_custom_cDhxUE": {
       "type": "logo-carousel-custom",
       "blocks": {
-        "logo_7FiMD9": {
-          "type": "logo",
-          "settings": {
-            "logo_height": 40,
-            "logo_max_width": 160
-          }
-        },
-        "logo_bkHGYm": {
-          "type": "logo",
-          "settings": {
-            "logo_height": 30,
-            "logo_max_width": 160
-          }
-        },
-        "logo_cMpLiz": {
-          "type": "logo",
-          "settings": {
-            "logo_height": 30,
-            "logo_max_width": 160
-          }
-        },
-        "logo_3QVAXK": {
-          "type": "logo",
-          "settings": {
-            "logo_height": 100,
-            "logo_max_width": 160
-          }
-        },
         "logo_JcTaD8": {
           "type": "logo",
           "settings": {
@@ -119,17 +91,49 @@
             "logo_height": 40,
             "logo_max_width": 160
           }
+        },
+        "logo_tFQYPE": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/COSMOPOLITAN.png",
+            "logo_height": 100,
+            "logo_max_width": 160
+          }
+        },
+        "logo_XbCTCA": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/VOGUE.svg",
+            "logo_height": 30,
+            "logo_max_width": 160
+          }
+        },
+        "logo_nhymdh": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/MARIE_CLAIRE.avif",
+            "logo_height": 50,
+            "logo_max_width": 160
+          }
+        },
+        "logo_kWptfT": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/ELLE.svg",
+            "logo_height": 40,
+            "logo_max_width": 160
+          }
         }
       },
       "block_order": [
-        "logo_7FiMD9",
-        "logo_bkHGYm",
-        "logo_cMpLiz",
-        "logo_3QVAXK",
         "logo_JcTaD8",
         "logo_V4GmgT",
         "logo_R4gwTx",
-        "logo_YCPLWM"
+        "logo_YCPLWM",
+        "logo_tFQYPE",
+        "logo_XbCTCA",
+        "logo_nhymdh",
+        "logo_kWptfT"
       ],
       "name": "Logo carousel",
       "settings": {
