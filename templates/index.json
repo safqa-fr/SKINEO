@@ -49,7 +49,7 @@
         "enable_parallax": false,
         "image_size": "auto",
         "image": "shopify://shop_images/lymphatic-drainage-face-brush.webp",
-        "mobile_image": "shopify://shop_images/Soin_du_visage_avec_gua_sha.png",
+        "mobile_image": "shopify://shop_images/lymphatic-drainage-face-brush-mobile.webp",
         "mobile_text_position": "place-self-end-center text-center",
         "desktop_text_position": "sm:place-self-end-center sm:text-center",
         "text_color": "#ffffff",
