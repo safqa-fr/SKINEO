@@ -322,13 +322,14 @@
     },
     "featured_collection_qxD4zN": {
       "type": "featured-collection",
-      "disabled": true,
       "name": "Featured collection",
       "settings": {
         "collection": "",
         "products": [
           "bio-collagen-mask",
-          "skineo-face-brush"
+          "skineo-face-brush",
+          "korean-black-rice-peel-shot-exfoliating-ampoule",
+          "korean-yellow-rice-peel-shot-exfoliating-ampoule"
         ],
         "full_width": true,
         "stack_products": true,
