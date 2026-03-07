@@ -352,7 +352,7 @@
       "limit_reached_html": "You are eligible for free shipping."
     },
     "shipping_estimator": {
-      "estimate_shipping": "Estimate shipping",
+      "estimate_shipping": "",
       "country": "Country",
       "province": "Province",
       "zip": "Zip code",
