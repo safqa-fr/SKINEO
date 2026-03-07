@@ -269,7 +269,7 @@
         "show_progress_bar": false,
         "products_count": 4,
         "products_per_row_mobile": "2",
-        "products_per_row_desktop": 3,
+        "products_per_row_desktop": 4,
         "subheading": "",
         "title": "Featured collection",
         "content": "",
@@ -288,8 +288,8 @@
   "order": [
     "main",
     "related-products",
+    "featured_collection_RdXUaK",
     "176712468156ec236f",
-    "1767124840b0b99441",
-    "featured_collection_RdXUaK"
+    "1767124840b0b99441"
   ]
 }
