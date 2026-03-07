@@ -131,7 +131,6 @@
         "image_Pk7phn": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_30_dec._2025_22_27_12-Photoroom_e8b9d033-7556-4351-873f-56fde39fbe00.png",
             "alignment": "center",
             "max_width": 300
           }
@@ -253,12 +252,44 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "featured_collection_RdXUaK": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "",
+        "products": [
+          "bio-collagen-mask",
+          "skineo-face-brush",
+          "korean-black-rice-peel-shot-exfoliating-serum",
+          "dr-melaxin-peel-shot-exfoliating-rice-serum"
+        ],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_count": 4,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "Featured collection",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
     }
   },
   "order": [
     "main",
     "related-products",
     "176712468156ec236f",
-    "1767124840b0b99441"
+    "1767124840b0b99441",
+    "featured_collection_RdXUaK"
   ]
 }
