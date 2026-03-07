@@ -320,6 +320,35 @@
         "input_text_color": ""
       }
     },
+    "featured_collection_qxD4zN": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "",
+        "products": [
+          "bio-collagen-mask",
+          "skineo-face-brush"
+        ],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_count": 6,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
     "rich_text_nHLnqf": {
       "type": "rich-text",
       "blocks": {
@@ -830,41 +859,13 @@
         "button_background": "",
         "button_text_color": ""
       }
-    },
-    "featured_collection_qxD4zN": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "collection": "",
-        "products": [
-          "bio-collagen-mask",
-          "skineo-face-brush"
-        ],
-        "full_width": true,
-        "stack_products": true,
-        "show_progress_bar": false,
-        "products_count": 6,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 3,
-        "subheading": "",
-        "title": "Featured collection",
-        "content": "",
-        "link_url": "",
-        "link_text": "View all",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
-      }
     }
   },
   "order": [
     "image_with_text_overlay_ctfJ7C",
     "logo_carousel_custom_cDhxUE",
     "featured_product_AWrxYa",
+    "featured_collection_qxD4zN",
     "rich_text_nHLnqf",
     "logo_list_xPKiBq",
     "rich_text_bkreWC",
@@ -875,7 +876,6 @@
     "1767125039fc7fb841",
     "tabs_GdnMbM",
     "faq_nTcrqG",
-    "contact_AVdaDC",
-    "featured_collection_qxD4zN"
+    "contact_AVdaDC"
   ]
 }
