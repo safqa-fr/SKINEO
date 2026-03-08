@@ -190,8 +190,13 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "collection": "our-skincare",
-        "products": [],
+        "collection": "",
+        "products": [
+          "skineo-face-brush",
+          "microneedle-patches-for-dark-circles",
+          "dr-melaxin-peel-shot-exfoliating-rice-serum",
+          "bio-collagen-mask"
+        ],
         "full_width": true,
         "stack_products": true,
         "show_progress_bar": false,
