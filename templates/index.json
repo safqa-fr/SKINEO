@@ -12,50 +12,33 @@
     "image_with_text_overlay_ctfJ7C": {
       "type": "image-with-text-overlay",
       "blocks": {
-        "heading_kAJmTa": {
-          "type": "heading",
+        "slide_Uamgpy": {
+          "type": "slide",
           "settings": {
-            "text": "Feel Lighter Starting Today",
-            "heading_tag": "h0"
+            "heading": ""
           }
         },
-        "richtext_XY6iPf": {
-          "type": "richtext",
+        "slide_xNWywj": {
+          "type": "slide",
           "settings": {
-            "content": "<h3>A natural daily ritual for a more relaxed-looking face</h3>"
+            "image": "shopify://shop_images/korean-skincare-under-eye-gel-patches-glass-skinkorean-skincare-under-eye-gel-patches-glass-skin_943b8c7e-06a7-4a5a-b0a9-ef1e8743be59.png",
+            "heading": ""
           }
         },
-        "button_apBxmz": {
-          "type": "button",
+        "slide_d74zpP": {
+          "type": "slide",
           "settings": {
-            "style": "fill",
-            "size": "lg",
-            "text": "Start My Ritual",
-            "url": "shopify://products/skineo-face-brush",
-            "background": "",
-            "text_color": ""
+            "heading": ""
           }
         }
       },
       "block_order": [
-        "heading_kAJmTa",
-        "richtext_XY6iPf",
-        "button_apBxmz"
+        "slide_Uamgpy",
+        "slide_xNWywj",
+        "slide_d74zpP"
       ],
       "name": "Image with text overlay",
-      "settings": {
-        "full_width": true,
-        "allow_transparent_header": false,
-        "enable_parallax": false,
-        "image_size": "auto",
-        "image": "shopify://shop_images/lymphatic-drainage-face-brush.webp",
-        "mobile_image": "shopify://shop_images/lymphatic-drainage-face-brush-mobile.webp",
-        "mobile_text_position": "place-self-end-center text-center",
-        "desktop_text_position": "sm:place-self-end-center sm:text-center",
-        "text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 10
-      }
+      "settings": {}
     },
     "logo_carousel_custom_cDhxUE": {
       "type": "logo-carousel-custom",
