@@ -14,217 +14,73 @@
       margin-block-start: calc(-1 * var(--header-height) * var(--section-is-first));
     {%- endif -%}
   }
-
-  .custom-slider-{{ section.id }} {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .custom-slider-track-{{ section.id }} {
-    display: flex;
-    width: 300%;
-    animation: sliderMove-{{ section.id }} 12s infinite;
-  }
-
-  .custom-slide-{{ section.id }} {
-    width: 100%;
-    flex: 0 0 100%;
-    position: relative;
-  }
-
-  .custom-slide-{{ section.id }} picture,
-  .custom-slide-{{ section.id }} img,
-  .custom-slide-{{ section.id }} .placeholder {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .custom-slide-content-{{ section.id }} {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    padding: 2rem;
-    z-index: 2;
-  }
-
-  .custom-slide-overlay-{{ section.id }} {
-    position: absolute;
-    inset: 0;
-    background: rgb({{ section.settings.overlay_color.rgb }} / {{ section.settings.overlay_opacity | divided_by: 100.0 }});
-    z-index: 1;
-  }
-
-  @keyframes sliderMove-{{ section.id }} {
-    0%, 28% {
-      transform: translateX(0%);
-    }
-    33%, 61% {
-      transform: translateX(-100%);
-    }
-    66%, 94% {
-      transform: translateX(-200%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
 </style>
 
 <div {% render 'section-properties' %} {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %}>
   {%- capture class -%}content-over-media content-over-media--{{ section.settings.image_size }} {% if section.settings.full_width %}full-bleed{% else %}shadow-block rounded-lg{% endif %}{%- endcapture -%}
 
-  <div class="custom-slider-{{ section.id }} {% if section.settings.full_width %}full-bleed{% else %}shadow-block rounded-lg{% endif %}">
-    <div class="custom-slider-track-{{ section.id }}">
+  <image-banner reveal-on-scroll="true" {% if section.settings.enable_parallax %}parallax="0.3"{% endif %} {% render 'surface', class: class, text_color: section.settings.text_color %}>
+    {%- if section.settings.image != blank -%}
+      {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min({{ settings.page_width }}px, 100vw - 96px){% endif %}{%- endcapture -%}
+      {%- capture fetch_priority -%}{% if section.index == 1 %}high{% else %}low{% endif %}{%- endcapture -%}
 
-      <!-- SLIDE 1 -->
-      <div class="custom-slide-{{ section.id }}">
-        <image-banner reveal-on-scroll="true" {% if section.settings.enable_parallax %}parallax="0.3"{% endif %} {% render 'surface', class: class, text_color: section.settings.text_color %}>
-          {%- if section.settings.image != blank -%}
-            {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min({{ settings.page_width }}px, 100vw - 96px){% endif %}{%- endcapture -%}
-            {%- capture fetch_priority -%}{% if section.index == 1 %}high{% else %}low{% endif %}{%- endcapture -%}
+      <picture>
+        {%- if section.settings.mobile_image != blank -%}
+          <source
+            media="(max-width: 699px)"
+            srcset="{{ section.settings.mobile_image | image_url: width: '400x' }} 400w, {{ section.settings.mobile_image | image_url: width: '600x' }} 600w, {{ section.settings.mobile_image | image_url: width: '800x' }} 800w, {{ section.settings.mobile_image | image_url: width: '1000x' }} 1000w, {{ section.settings.mobile_image | image_url: width: '1200x' }} 1200w"
+            width="{{ section.settings.mobile_image.width }}"
+            height="{{ section.settings.mobile_image.height }}"
+          >
+        {%- endif -%}
 
-            <picture>
-              {%- if section.settings.mobile_image != blank -%}
-                <source
-                  media="(max-width: 699px)"
-                  srcset="{{ section.settings.mobile_image | image_url: width: '400x' }} 400w, {{ section.settings.mobile_image | image_url: width: '600x' }} 600w, {{ section.settings.mobile_image | image_url: width: '800x' }} 800w, {{ section.settings.mobile_image | image_url: width: '1000x' }} 1000w, {{ section.settings.mobile_image | image_url: width: '1200x' }} 1200w"
-                  width="{{ section.settings.mobile_image.width }}"
-                  height="{{ section.settings.mobile_image.height }}"
-                >
-              {%- endif -%}
+        {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: sizes: sizes, fetchpriority: fetch_priority, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
+      </picture>
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' }}
+    {%- endif -%}
 
-              {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: sizes: sizes, fetchpriority: fetch_priority, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
-            </picture>
-          {%- else -%}
-            {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' }}
-          {%- endif -%}
+    {%- if section.blocks.size > 0 -%}
+      <div class="{{ section.settings.mobile_text_position }} {{ section.settings.desktop_text_position }}">
+        <div class="prose">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'subheading' -%}
+                {%- if block.settings.text != blank -%}
+                  <p class="bold" {{ block.shopify_attributes }}>{{ block.settings.text | escape }}</p>
+                {%- endif -%}
 
-          <div class="custom-slide-overlay-{{ section.id }}"></div>
+              {%- when 'heading' -%}
+                {%- if block.settings.text != blank -%}
+                  <p class="{{ block.settings.heading_tag }}" {% if settings.heading_apparition != 'none' %}reveal-on-scroll="true"{% endif %} {{ block.shopify_attributes }}>
+                    {%- render 'styled-text', content: block.settings.text, apparition_effect: true -%}
+                  </p>
+                {%- endif -%}
 
-          {%- if section.blocks.size > 0 -%}
-            <div class="custom-slide-content-{{ section.id }} {{ section.settings.mobile_text_position }} {{ section.settings.desktop_text_position }}">
-              <div class="prose">
-                {%- for block in section.blocks -%}
-                  {%- case block.type -%}
-                    {%- when 'subheading' -%}
-                      {%- if block.settings.text != blank -%}
-                        <p class="bold" {{ block.shopify_attributes }}>{{ block.settings.text | escape }}</p>
-                      {%- endif -%}
+              {%- when 'richtext' -%}
+                {%- if block.settings.content != blank -%}
+                  <div {{ block.shopify_attributes }}>
+                    {{- block.settings.content -}}
+                  </div>
+                {%- endif -%}
 
-                    {%- when 'heading' -%}
-                      {%- if block.settings.text != blank -%}
-                        <p class="{{ block.settings.heading_tag }}" {% if settings.heading_apparition != 'none' %}reveal-on-scroll="true"{% endif %} {{ block.shopify_attributes }}>
-                          {%- render 'styled-text', content: block.settings.text, apparition_effect: true -%}
-                        </p>
-                      {%- endif -%}
+              {%- when 'liquid' -%}
+                {%- if block.settings.liquid != blank -%}
+                  <div {{ block.shopify_attributes }}>
+                    {{- block.settings.liquid -}}
+                  </div>
+                {%- endif -%}
 
-                    {%- when 'richtext' -%}
-                      {%- if block.settings.content != blank -%}
-                        <div {{ block.shopify_attributes }}>
-                          {{- block.settings.content -}}
-                        </div>
-                      {%- endif -%}
-
-                    {%- when 'liquid' -%}
-                      {%- if block.settings.liquid != blank -%}
-                        <div {{ block.shopify_attributes }}>
-                          {{- block.settings.liquid -}}
-                        </div>
-                      {%- endif -%}
-
-                    {%- when 'button' -%}
-                      {%- if block.settings.text != blank -%}
-                        {% render 'button', content: block.settings.text, href: block.settings.url, size: block.settings.size, style: block.settings.style, background: block.settings.background, text_color: block.settings.text_color, block: block %}
-                      {%- endif -%}
-                  {%- endcase -%}
-                {%- endfor -%}
-              </div>
-            </div>
-          {%- endif -%}
-        </image-banner>
+              {%- when 'button' -%}
+                {%- if block.settings.text != blank -%}
+                  {% render 'button', content: block.settings.text, href: block.settings.url, size: block.settings.size, style: block.settings.style, background: block.settings.background, text_color: block.settings.text_color, block: block %}
+                {%- endif -%}
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
       </div>
-
-      <!-- SLIDE 2 -->
-      <div class="custom-slide-{{ section.id }}">
-        <image-banner {% render 'surface', class: class, text_color: section.settings.text_color %}>
-          {%- if section.settings.image_2 != blank -%}
-            <picture>
-              {%- if section.settings.mobile_image_2 != blank -%}
-                <source
-                  media="(max-width: 699px)"
-                  srcset="{{ section.settings.mobile_image_2 | image_url: width: '400x' }} 400w, {{ section.settings.mobile_image_2 | image_url: width: '600x' }} 600w, {{ section.settings.mobile_image_2 | image_url: width: '800x' }} 800w, {{ section.settings.mobile_image_2 | image_url: width: '1000x' }} 1000w, {{ section.settings.mobile_image_2 | image_url: width: '1200x' }} 1200w"
-                  width="{{ section.settings.mobile_image_2.width }}"
-                  height="{{ section.settings.mobile_image_2.height }}"
-                >
-              {%- endif -%}
-
-              {{- section.settings.image_2 | image_url: width: section.settings.image_2.width | image_tag: widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
-            </picture>
-          {%- endif -%}
-
-          <div class="custom-slide-overlay-{{ section.id }}"></div>
-
-          <div class="custom-slide-content-{{ section.id }} {{ section.settings.mobile_text_position }} {{ section.settings.desktop_text_position }}">
-            <div class="prose">
-              {%- if section.settings.subheading_2 != blank -%}
-                <p class="bold">{{ section.settings.subheading_2 }}</p>
-              {%- endif -%}
-              {%- if section.settings.heading_2 != blank -%}
-                <p class="h1">{{ section.settings.heading_2 }}</p>
-              {%- endif -%}
-              {%- if section.settings.text_2 != blank -%}
-                <div>{{ section.settings.text_2 }}</div>
-              {%- endif -%}
-              {%- if section.settings.button_text_2 != blank -%}
-                {% render 'button', content: section.settings.button_text_2, href: section.settings.button_url_2, size: 'lg', style: 'fill' %}
-              {%- endif -%}
-            </div>
-          </div>
-        </image-banner>
-      </div>
-
-      <!-- SLIDE 3 -->
-      <div class="custom-slide-{{ section.id }}">
-        <image-banner {% render 'surface', class: class, text_color: section.settings.text_color %}>
-          {%- if section.settings.image_3 != blank -%}
-            <picture>
-              {%- if section.settings.mobile_image_3 != blank -%}
-                <source
-                  media="(max-width: 699px)"
-                  srcset="{{ section.settings.mobile_image_3 | image_url: width: '400x' }} 400w, {{ section.settings.mobile_image_3 | image_url: width: '600x' }} 600w, {{ section.settings.mobile_image_3 | image_url: width: '800x' }} 800w, {{ section.settings.mobile_image_3 | image_url: width: '1000x' }} 1000w, {{ section.settings.mobile_image_3 | image_url: width: '1200x' }} 1200w"
-                  width="{{ section.settings.mobile_image_3.width }}"
-                  height="{{ section.settings.mobile_image_3.height }}"
-                >
-              {%- endif -%}
-
-              {{- section.settings.image_3 | image_url: width: section.settings.image_3.width | image_tag: widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
-            </picture>
-          {%- endif -%}
-
-          <div class="custom-slide-overlay-{{ section.id }}"></div>
-
-          <div class="custom-slide-content-{{ section.id }} {{ section.settings.mobile_text_position }} {{ section.settings.desktop_text_position }}">
-            <div class="prose">
-              {%- if section.settings.subheading_3 != blank -%}
-                <p class="bold">{{ section.settings.subheading_3 }}</p>
-              {%- endif -%}
-              {%- if section.settings.heading_3 != blank -%}
-                <p class="h1">{{ section.settings.heading_3 }}</p>
-              {%- endif -%}
-              {%- if section.settings.text_3 != blank -%}
-                <div>{{ section.settings.text_3 }}</div>
-              {%- endif -%}
-              {%- if section.settings.button_text_3 != blank -%}
-                {% render 'button', content: section.settings.button_text_3, href: section.settings.button_url_3, size: 'lg', style: 'fill' %}
-              {%- endif -%}
-            </div>
-          </div>
-        </image-banner>
-      </div>
-
-    </div>
-  </div>
+    {%- endif -%}
+  </image-banner>
 </div>
 
 {% schema %}
@@ -263,112 +119,83 @@
       "id": "image_size",
       "label": "Image size",
       "options": [
-        { "value": "auto", "label": "Original image ratio" },
-        { "value": "sm", "label": "Small" },
-        { "value": "md", "label": "Medium" },
-        { "value": "lg", "label": "Large" },
-        { "value": "fill", "label": "Fill screen" }
+        {
+          "value": "auto",
+          "label": "Original image ratio"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        },
+        {
+          "value": "fill",
+          "label": "Fill screen"
+        }
       ],
+      "info": "Choose \"Original image ratio\" to avoid image cropping. [Learn more](https://help.shopify.com/en/manual/online-store/images/theme-images#best-practices-for-slideshows-and-full-widtw-images)",
       "default": "auto"
     },
-
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Slide 1 image"
+      "label": "Image",
+      "info": "3200 x 1600px .jpg recommended"
     },
     {
       "type": "image_picker",
       "id": "mobile_image",
-      "label": "Slide 1 mobile image"
+      "label": "Mobile image",
+      "info": "1300 x 1500px .jpg recommended. Default to desktop image."
     },
-
-    {
-      "type": "image_picker",
-      "id": "image_2",
-      "label": "Slide 2 image"
-    },
-    {
-      "type": "image_picker",
-      "id": "mobile_image_2",
-      "label": "Slide 2 mobile image"
-    },
-    {
-      "type": "text",
-      "id": "subheading_2",
-      "label": "Slide 2 subheading"
-    },
-    {
-      "type": "text",
-      "id": "heading_2",
-      "label": "Slide 2 heading"
-    },
-    {
-      "type": "richtext",
-      "id": "text_2",
-      "label": "Slide 2 text"
-    },
-    {
-      "type": "text",
-      "id": "button_text_2",
-      "label": "Slide 2 button text"
-    },
-    {
-      "type": "url",
-      "id": "button_url_2",
-      "label": "Slide 2 button link"
-    },
-
-    {
-      "type": "image_picker",
-      "id": "image_3",
-      "label": "Slide 3 image"
-    },
-    {
-      "type": "image_picker",
-      "id": "mobile_image_3",
-      "label": "Slide 3 mobile image"
-    },
-    {
-      "type": "text",
-      "id": "subheading_3",
-      "label": "Slide 3 subheading"
-    },
-    {
-      "type": "text",
-      "id": "heading_3",
-      "label": "Slide 3 heading"
-    },
-    {
-      "type": "richtext",
-      "id": "text_3",
-      "label": "Slide 3 text"
-    },
-    {
-      "type": "text",
-      "id": "button_text_3",
-      "label": "Slide 3 button text"
-    },
-    {
-      "type": "url",
-      "id": "button_url_3",
-      "label": "Slide 3 button link"
-    },
-
     {
       "type": "select",
       "id": "mobile_text_position",
       "label": "Mobile content position",
       "options": [
-        { "value": "place-self-start text-start", "label": "Top left" },
-        { "value": "place-self-start-center text-center", "label": "Top center" },
-        { "value": "place-self-start-end text-end", "label": "Top right" },
-        { "value": "place-self-center-start text-start", "label": "Middle left" },
-        { "value": "place-self-center text-center", "label": "Middle center" },
-        { "value": "place-self-center-end text-end", "label": "Middle right" },
-        { "value": "place-self-end-start text-start", "label": "Bottom left" },
-        { "value": "place-self-end-center text-center", "label": "Bottom center" },
-        { "value": "place-self-end text-end", "label": "Bottom right" }
+        {
+          "value": "place-self-start text-start",
+          "label": "Top left"
+        },
+        {
+          "value": "place-self-start-center text-center",
+          "label": "Top center"
+        },
+        {
+          "value": "place-self-start-end text-end",
+          "label": "Top right"
+        },
+        {
+          "value": "place-self-center-start text-start",
+          "label": "Middle left"
+        },
+        {
+          "value": "place-self-center text-center",
+          "label": "Middle center"
+        },
+        {
+          "value": "place-self-center-end text-end",
+          "label": "Middle right"
+        },
+        {
+          "value": "place-self-end-start text-start",
+          "label": "Bottom left"
+        },
+        {
+          "value": "place-self-end-center text-center",
+          "label": "Bottom center"
+        },
+        {
+          "value": "place-self-end text-end",
+          "label": "Bottom right"
+        }
       ],
       "default": "place-self-center text-center"
     },
@@ -377,19 +204,45 @@
       "id": "desktop_text_position",
       "label": "Desktop content position",
       "options": [
-        { "value": "sm:place-self-start sm:text-start", "label": "Top left" },
-        { "value": "sm:place-self-start-center sm:text-center", "label": "Top center" },
-        { "value": "sm:place-self-start-end sm:text-end", "label": "Top right" },
-        { "value": "sm:place-self-center-start sm:text-start", "label": "Middle left" },
-        { "value": "sm:place-self-center sm:text-center", "label": "Middle center" },
-        { "value": "sm:place-self-center-end sm:text-end", "label": "Middle right" },
-        { "value": "sm:place-self-end-start sm:text-start", "label": "Bottom left" },
-        { "value": "sm:place-self-end-center sm:text-center", "label": "Bottom center" },
-        { "value": "sm:place-self-end sm:text-end", "label": "Bottom right" }
+        {
+          "value": "sm:place-self-start sm:text-start",
+          "label": "Top left"
+        },
+        {
+          "value": "sm:place-self-start-center sm:text-center",
+          "label": "Top center"
+        },
+        {
+          "value": "sm:place-self-start-end sm:text-end",
+          "label": "Top right"
+        },
+        {
+          "value": "sm:place-self-center-start sm:text-start",
+          "label": "Middle left"
+        },
+        {
+          "value": "sm:place-self-center sm:text-center",
+          "label": "Middle center"
+        },
+        {
+          "value": "sm:place-self-center-end sm:text-end",
+          "label": "Middle right"
+        },
+        {
+          "value": "sm:place-self-end-start sm:text-start",
+          "label": "Bottom left"
+        },
+        {
+          "value": "sm:place-self-end-center sm:text-center",
+          "label": "Bottom center"
+        },
+        {
+          "value": "sm:place-self-end sm:text-end",
+          "label": "Bottom right"
+        }
       ],
       "default": "sm:place-self-center sm:text-center"
     },
-
     {
       "type": "header",
       "content": "Colors"
@@ -445,13 +298,34 @@
           "id": "heading_tag",
           "label": "Style",
           "options": [
-            { "value": "h0", "label": "XX-Large" },
-            { "value": "h1", "label": "X-Large" },
-            { "value": "h2", "label": "Large" },
-            { "value": "h3", "label": "Medium" },
-            { "value": "h4", "label": "Small" },
-            { "value": "h5", "label": "X-Small" },
-            { "value": "h6", "label": "XX-Small" }
+            {
+              "value": "h0",
+              "label": "XX-Large"
+            },
+            {
+              "value": "h1",
+              "label": "X-Large"
+            },
+            {
+              "value": "h2",
+              "label": "Large"
+            },
+            {
+              "value": "h3",
+              "label": "Medium"
+            },
+            {
+              "value": "h4",
+              "label": "Small"
+            },
+            {
+              "value": "h5",
+              "label": "X-Small"
+            },
+            {
+              "value": "h6",
+              "label": "XX-Small"
+            }
           ],
           "default": "h1"
         }
@@ -465,7 +339,7 @@
           "type": "richtext",
           "id": "content",
           "label": "Content",
-          "default": "<p>Use this text to share information about your brand with your customers.</p>"
+          "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
         }
       ]
     },
@@ -477,7 +351,7 @@
           "type": "liquid",
           "id": "liquid",
           "label": "Liquid",
-          "default": "<p>Use this text to output some custom Liquid code.</p>"
+          "default": "<p>Use this text to output some custom Liquid code to include widget or dynamic code.</p>"
         }
       ]
     },
@@ -490,8 +364,14 @@
           "id": "style",
           "label": "Style",
           "options": [
-            { "value": "outline", "label": "Outline" },
-            { "value": "fill", "label": "Fill" }
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "fill",
+              "label": "Fill"
+            }
           ],
           "default": "fill"
         },
@@ -500,10 +380,22 @@
           "id": "size",
           "label": "Size",
           "options": [
-            { "value": "sm", "label": "Small" },
-            { "value": "base", "label": "Medium" },
-            { "value": "lg", "label": "Large" },
-            { "value": "xl", "label": "X-Large" }
+            {
+              "value": "sm",
+              "label": "Small"
+            },
+            {
+              "value": "base",
+              "label": "Medium"
+            },
+            {
+              "value": "lg",
+              "label": "Large"
+            },
+            {
+              "value": "xl",
+              "label": "X-Large"
+            }
           ],
           "default": "lg"
         },
@@ -533,7 +425,25 @@
   ],
   "presets": [
     {
-      "name": "Image with text overlay"
+      "name": "Image with text overlay",
+      "blocks": [
+        {
+          "type": "subheading",
+          "settings": {
+            "text": "Subheading"
+          }
+        },
+        {
+          "type": "heading",
+          "settings": {
+            "text": "Image with text overlay",
+            "heading_tag": "h1"
+          }
+        },
+        {
+          "type": "richtext"
+        }
+      ]
     }
   ]
 }
