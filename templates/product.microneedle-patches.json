@@ -370,11 +370,84 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "multiple_images_with_text_yM7mCp": {
+      "type": "multiple-images-with-text",
+      "blocks": {
+        "item_VB7YDa": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/9.png",
+            "image_rotation_degrees": 0,
+            "subheading": "",
+            "title": "",
+            "content": "<p>✓ <strong>DE-PUFFS IN MINUTES</strong><br/>Helps reduce facial puffiness for a fresher, more rested look.</p><p>✓ <strong>SMOOTHER-LOOKING SKIN</strong><br/>Skin appears more even and refined after just a few gentle strokes.</p><p>✓ <strong>ULTRA-SOFT TOUCH</strong><br/>Designed to glide comfortably without pulling, pain, or irritation.</p>",
+            "button_url": "",
+            "button_text": ""
+          }
+        },
+        "item_zbnXT8": {
+          "type": "item",
+          "settings": {
+            "image_rotation_degrees": -2,
+            "subheading": "",
+            "title": "",
+            "content": "<p>✓ <strong>NO PRODUCTS NEEDED</strong><br/>Use it dry, anytime, anywhere. No products, no mess, no extra steps.</p><p>✓ <strong>QUICK DAILY ROUTINE</strong><br/>Takes only a few minutes and fits easily into any routine, at home or on the go.</p><p>✓ <strong>REUSABLE</strong><br/>A long-lasting tool designed for everyday use, with no ongoing costs.</p>",
+            "button_url": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_VB7YDa",
+        "item_zbnXT8"
+      ],
+      "name": "Multiple images with text",
+      "settings": {
+        "full_width": false,
+        "images_layout": "stacked",
+        "collage_images_alignment": "middle",
+        "autoplay": true,
+        "autoplay_delay": 9,
+        "pause_on_hover": true,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
+    },
+    "before_after_image_Y4w9Jq": {
+      "type": "before-after-image",
+      "name": "Before/after image",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "Before & After Results",
+        "content": "<p>Expert-Approved.<br/>We don’t make promises. We show real results.</p>",
+        "before_image": "shopify://shop_images/3.png",
+        "after_image": "shopify://shop_images/4.png",
+        "expand_image": false,
+        "text_position": "center",
+        "before_after_text_position": "top",
+        "before_text": "Before",
+        "after_text": "After",
+        "drag_initial_position": 50,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "#000000",
+        "before_text_color": "#000000",
+        "after_text_color": "#000000",
+        "drag_cursor_background": "#ffffff",
+        "drag_cursor_color": "#000000"
+      }
     }
   },
   "order": [
     "main",
     "featured_product_86GpzL",
-    "rich_text_ALhkri"
+    "rich_text_ALhkri",
+    "multiple_images_with_text_yM7mCp",
+    "before_after_image_Y4w9Jq"
   ]
 }
