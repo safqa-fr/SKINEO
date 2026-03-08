@@ -195,6 +195,63 @@
         "product_card_text_color": ""
       }
     },
+    "tabs_JcVwYg": {
+      "type": "tabs",
+      "blocks": {
+        "tab_cAFn4M": {
+          "type": "tab",
+          "settings": {
+            "title": "White Rice or Black Rice?",
+            "content": "<h3>Choose Your Peel Shot</h3><p><strong>- White Rice</strong><br/><br/>For sensitive, normal, or dry skin.<br/><br/>Gentle, hydrating exfoliation that delivers instant glow, refines skin texture, boosts hydration, and is safe for sensitive skin.<br/><br/><strong>Use:</strong> 2–3 times per week.</p><p><strong>- Black Rice</strong><br/><br/>For oily, combination, or blemish-prone skin.<br/><br/>Intensive, purifying exfoliation that deeply cleans pores, helps reduce blackheads, controls excess oil, and minimizes the look of enlarged pores.<br/><br/><strong>Use:</strong> 1–2 times per week (focus on problem areas).</p><p><strong>Our tip:</strong><br/><br/>Not sure which one to choose? Start with <strong>White Rice</strong> for sensitive or normal skin. Choose <strong>Black Rice</strong> if you struggle with enlarged pores or excess oil. You can also alternate between both depending on your skin’s needs.</p><p><strong>Recommended use:</strong> 2–3 times per week</p><h3>Peel Shot Black Rice</h3><p><strong>Best for:</strong> Oily, combination, or blemish-prone skin</p><p><strong>Action:</strong> Intensive, purifying exfoliation</p><p><strong>Benefits:</strong></p><ul><li>Deep pore cleansing<br/></li><li>Helps reduce blackheads and impurities<br/></li><li>Sebum control<br/></li><li>Minimizes the appearance of enlarged pores<br/></li></ul><p><strong>Recommended use:</strong> 1–2 times per week (focus on problem areas)</p><h3>Our Recommendation</h3><p>Not sure which one to choose?<br/><br/>Start with <strong>White Rice</strong> if you have sensitive or normal skin.<br/><br/>Choose <strong>Black Rice</strong> if you’re dealing with enlarged pores or excess oil.</p><p><strong>Pro tip:</strong> You can also alternate between the two depending on your skin’s needs!</p>",
+            "page": ""
+          }
+        },
+        "tab_TxFwiR": {
+          "type": "tab",
+          "settings": {
+            "title": "Tab 1",
+            "content": "<p>Use this text to share information about your brand with your customers.</p>",
+            "page": ""
+          }
+        },
+        "tab_qih8hJ": {
+          "type": "tab",
+          "settings": {
+            "title": "Tab 2",
+            "content": "<p>Describe a product, share announcements, or welcome customers to your store.</p>",
+            "page": ""
+          }
+        },
+        "tab_fjmRgM": {
+          "type": "tab",
+          "settings": {
+            "title": "Tab 3",
+            "content": "<p>Share information about your shipping rates, return policy or contact information.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_cAFn4M",
+        "tab_TxFwiR",
+        "tab_qih8hJ",
+        "tab_fjmRgM"
+      ],
+      "name": "Tabs",
+      "settings": {
+        "full_width": true,
+        "content_size": "medium",
+        "subheading": "Subheading",
+        "title": "Heading",
+        "text_alignment": "center",
+        "first_tab_open": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
     "featured_collection_RdXUaK": {
       "type": "featured-collection",
       "name": "Featured collection",
@@ -288,6 +345,7 @@
   "order": [
     "main",
     "related-products",
+    "tabs_JcVwYg",
     "featured_collection_RdXUaK",
     "176712468156ec236f",
     "1767124840b0b99441"
