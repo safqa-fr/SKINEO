@@ -11,18 +11,6 @@
   "sections": {
     "image_with_text_overlay_ctfJ7C": {
       "type": "image-with-text-overlay",
-      "blocks": {
-        "heading_8Bhe7H": {
-          "type": "heading",
-          "settings": {
-            "text": "Heading",
-            "heading_tag": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_8Bhe7H"
-      ],
       "name": "Image with text overlay",
       "settings": {
         "full_width": true,
@@ -30,13 +18,21 @@
         "enable_parallax": false,
         "image_size": "auto",
         "autoplay_speed": 5,
-        "image": "shopify://shop_images/Lymphatic_drainage_brush.png",
-        "mobile_image": "shopify://shop_images/Soin_du_visage_avec_gua_sha.png",
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center sm:text-center",
-        "text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 30,
+        "subheading_1": "Subheading",
+        "heading_1": "Heading",
+        "heading_tag_1": "h1",
+        "content_1": "<p>Use this text to share information about your brand with your customers.</p>",
+        "button_style_1": "fill",
+        "button_size_1": "lg",
+        "button_text_1": "Button text",
+        "button_url_1": "",
+        "button_background_1": "",
+        "button_text_color_1": "",
+        "text_color_1": "#ffffff",
+        "overlay_color_1": "#000000",
+        "overlay_opacity_1": 30,
         "image_2": "shopify://shop_images/korean-skincare-under-eye-gel-patches-glass-skinkorean-skincare-under-eye-gel-patches-glass-skin_943b8c7e-06a7-4a5a-b0a9-ef1e8743be59.png",
         "subheading_2": "Subheading",
         "heading_2": "Heading",
@@ -153,6 +149,32 @@
         "gap": 40
       }
     },
+    "featured_collection_gtmkEH": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "our-skincare",
+        "products": [],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_count": 4,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "subheading": "",
+        "title": "Featured collection",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
     "contact_AVdaDC": {
       "type": "contact",
       "name": "Contact form",
@@ -178,6 +200,7 @@
   "order": [
     "image_with_text_overlay_ctfJ7C",
     "logo_carousel_custom_cDhxUE",
+    "featured_collection_gtmkEH",
     "contact_AVdaDC"
   ]
 }
