@@ -323,6 +323,7 @@
     },
     "featured_collection_qxD4zN": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "Featured collection",
       "settings": {
         "collection": "",
