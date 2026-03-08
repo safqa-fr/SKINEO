@@ -35,29 +35,6 @@
             "background_gradient": ""
           }
         },
-        "image_bmtVrz": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/026_19_49_42.png",
-            "mobile_image": "shopify://shop_images/2026_19_48_47.png",
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-end-center text-center",
-            "desktop_text_position": "sm:place-self-end-center sm:text-center",
-            "subheading": "Tell your story",
-            "title": "Slide title",
-            "paragraph": "<p>Add a short paragraph here.</p>",
-            "heading_tag": "h0",
-            "button_text": "",
-            "button_link": "",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10,
-            "background": "",
-            "background_gradient": ""
-          }
-        },
         "image_GqyGCA": {
           "type": "image",
           "settings": {
@@ -84,7 +61,6 @@
       },
       "block_order": [
         "image_rxpqK7",
-        "image_bmtVrz",
         "image_GqyGCA"
       ],
       "name": "Slideshow",
