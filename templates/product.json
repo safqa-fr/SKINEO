@@ -209,8 +209,8 @@
         "tab_TxFwiR": {
           "type": "tab",
           "settings": {
-            "title": "Tab 1",
-            "content": "<p>Use this text to share information about your brand with your customers.</p>",
+            "title": "How to Use the Peel Shot ?",
+            "content": "<h3>It’s Ultra-Simple in 3 Steps</h3><ol><li>Cleanse your face and dry it completely<br/></li><li>Apply a small amount to dry skin and gently massage in circular motions for 1–2 minutes<br/><em>(you’ll see the little flakes — that’s dead skin being removed!)</em><br/></li><li>Rinse with lukewarm water and follow with your moisturizer<br/></li></ol><p><strong>Frequency:</strong> Use 2–3 times per week maximum. Avoid over-exfoliating to prevent skin irritation.</p>",
             "page": ""
           }
         },
