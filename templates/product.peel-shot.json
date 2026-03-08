@@ -648,35 +648,6 @@
         "text_color": ""
       }
     },
-    "1772997071621df11c": {
-      "type": "apps",
-      "blocks": {
-        "loox_reviews_loox_dynamic_section_ReGM6K": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "settings": {
-            "reviews_to_display": "",
-            "default_tab": "automatic",
-            "only_photos": false,
-            "aggregated": false,
-            "limit": 8,
-            "hide_thumbnails": false,
-            "maxwidth": 1080,
-            "is_sample": true
-          }
-        }
-      },
-      "block_order": [
-        "loox_reviews_loox_dynamic_section_ReGM6K"
-      ],
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
     "tabs_LKUMmR": {
       "type": "tabs",
       "blocks": {
@@ -732,6 +703,35 @@
         "text_color": "",
         "heading_color": "",
         "heading_gradient": ""
+      }
+    },
+    "1772997071621df11c": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_dynamic_section_ReGM6K": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 8,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_dynamic_section_ReGM6K"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
       }
     },
     "faq_dPNyz3": {
@@ -828,6 +828,7 @@
   "order": [
     "main",
     "featured_product_GnXUix",
+    "tabs_LKUMmR",
     "featured_collection_kCqUqa",
     "rich_text_NTbRkD",
     "multiple_images_with_text_t3gKjK",
@@ -836,7 +837,6 @@
     "multi_column_MpXCVd",
     "multi_column_G4VY83",
     "1772997071621df11c",
-    "tabs_LKUMmR",
     "faq_dPNyz3",
     "contact_FL9QJg"
   ]
