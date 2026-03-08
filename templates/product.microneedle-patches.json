@@ -671,7 +671,7 @@
           "type": "tab",
           "settings": {
             "title": "Try it risk-free for 30 days",
-            "content": "<p>Try the Microneedle Eye Patches <strong>risk-free for 30 days</strong>. If you're not satisfied and the product is unused and unopened, you may return it for a full refund.</p>",
+            "content": "<p>Try the Microneedle Eye Patches <strong>risk-free for 30 days</strong>. If you're not satisfied and the product is <strong>unused </strong>and <strong>unopened</strong>, you may return it for a full refund.</p>",
             "page": ""
           }
         },
