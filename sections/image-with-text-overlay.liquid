@@ -4,19 +4,27 @@
 
 <style>
   #shopify-section-{{ section.id }} {
-    {%- if section.settings.full_width -%}
-      --section-outer-spacing-block: 0;
-    {%- endif -%}
+    --section-outer-spacing-block: 0;
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
 
     {%- if section.settings.allow_transparent_header -%}
       margin-block-start: calc(-1 * var(--header-height) * var(--section-is-first));
     {%- endif -%}
   }
 
+  #shopify-section-{{ section.id }} > * {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .image-overlay-slider-{{ section.id }} {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 100vw;
+    max-width: 100vw;
   }
 
   .image-overlay-slider__track-{{ section.id }} {
@@ -32,6 +40,14 @@
     max-width: 100%;
     position: relative;
     overflow: hidden;
+  }
+
+  .image-overlay-slider__slide-{{ section.id }} image-banner,
+  .image-overlay-slider__slide-{{ section.id }} picture,
+  .image-overlay-slider__slide-{{ section.id }} img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
   }
 
   .image-overlay-slider__nav-{{ section.id }} {
@@ -94,9 +110,9 @@
 </style>
 
 <div {% render 'section-properties' %} {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %}>
-  {%- capture class -%}content-over-media content-over-media--{{ section.settings.image_size }} {% if section.settings.full_width %}full-bleed{% else %}shadow-block rounded-lg{% endif %}{%- endcapture -%}
+  {%- capture class -%}content-over-media content-over-media--{{ section.settings.image_size }} full-bleed{%- endcapture -%}
 
-  <div class="image-overlay-slider-{{ section.id }}" id="image-overlay-slider-{{ section.id }}">
+  <div class="image-overlay-slider-{{ section.id }} full-bleed" id="image-overlay-slider-{{ section.id }}">
     <div class="image-overlay-slider__track-{{ section.id }}">
 
       {%- for i in (1..3) -%}
@@ -137,7 +153,7 @@
         <div class="image-overlay-slider__slide-{{ section.id }}">
           <style>
             #shopify-section-{{ section.id }} {
-              --slide-overlay-{{ i }}: {{ slide_overlay_color.rgb }} / {{ slide_overlay_opacity | divided_by: 100.0 }};
+              --content-over-media-overlay: {{ slide_overlay_color.rgb }} / {{ slide_overlay_opacity | divided_by: 100.0 }};
             }
           </style>
 
@@ -254,15 +270,19 @@
       }
     }
 
-    nextBtn.addEventListener('click', () => {
-      nextSlide();
-      startAutoplay();
-    });
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        startAutoplay();
+      });
+    }
 
-    prevBtn.addEventListener('click', () => {
-      prevSlide();
-      startAutoplay();
-    });
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        startAutoplay();
+      });
+    }
 
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
