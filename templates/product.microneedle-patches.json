@@ -595,6 +595,183 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "apps_rr6cge": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_agg_section_WczBpX": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 8,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_agg_section_WczBpX"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "tabs_YKzwia": {
+      "type": "tabs",
+      "blocks": {
+        "tab_8K3Wij": {
+          "type": "tab",
+          "settings": {
+            "title": "Key Features",
+            "content": "<ul><li><strong>Microneedle eye patches</strong><br/>Designed to target the delicate under-eye area with precision.</li><li><strong>Advanced micro-needle technology</strong><br/>Ultra-fine dissolving micro-cones help deliver active ingredients deeper into the skin.</li><li><strong>Targeted under-eye treatment</strong><br/>Helps improve the appearance of dark circles, puffiness, and fine lines.</li><li><strong>Hyaluronic acid–infused formula</strong><br/>Supports hydration and smoother-looking skin.</li><li><strong>Non-invasive, pain-free application</strong><br/>Professional-inspired care at home without downtime.</li><li><strong>Easy to use</strong><br/>Apply to clean skin and leave on for the recommended time.</li><li><strong>Individually sealed patches</strong><br/>Ensures hygiene and optimal product freshness.</li><li><strong>Single-use treatment</strong><br/>Precisely dosed for maximum effectiveness per application.</li><li><strong>Quick skincare ritual</strong><br/>Recommended use: 1–2 times per week.</li></ul>",
+            "page": ""
+          }
+        },
+        "tab_bEHm9R": {
+          "type": "tab",
+          "settings": {
+            "title": "Try it risk-free for 30 days",
+            "content": "<p>Try the Lumeya Microneedle Eye Patches risk-free <strong>for 30 day</strong>s. If you are not completely satisfied with your Lumeya Microneedle Eye Patches, <strong>you may return it for a full refund</strong>.</p>",
+            "page": ""
+          }
+        },
+        "tab_qH68Ut": {
+          "type": "tab",
+          "settings": {
+            "title": "Free Delivery to Your Door",
+            "content": "<p><strong>Free home delivery is included. </strong>Depending on the volume of orders being processed, delivery is estimated between <strong>5 and 12 business days</strong>.</p>",
+            "page": ""
+          }
+        },
+        "tab_JcrkYb": {
+          "type": "tab",
+          "settings": {
+            "title": "7-day customer support",
+            "content": "<p>Our team is available to answer your questions seven days a week.</p><p>You can contact us by email during the following hours: <strong>Monday to Friday from 9:00 a.m. to 12:00 p.m. and from 2:00 p.m. to 6:00 p.m., and Saturday and Sunday from 10:00 a.m. to 12:00 p.m. </strong></p><p>Feel free to get in touch with us.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_8K3Wij",
+        "tab_bEHm9R",
+        "tab_qH68Ut",
+        "tab_JcrkYb"
+      ],
+      "name": "Tabs",
+      "settings": {
+        "full_width": true,
+        "content_size": "medium",
+        "subheading": "",
+        "title": "",
+        "text_alignment": "center",
+        "first_tab_open": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "faq_jbxKhh": {
+      "type": "faq",
+      "blocks": {
+        "item_VYXiUB": {
+          "type": "item",
+          "settings": {
+            "title": "How do microneedle patches work?",
+            "content": "<p>Our patches contain ultra-fine dissolving micro-cones that gently melt into the skin, helping deliver active ingredients directly to the under-eye area for targeted care.</p>"
+          }
+        },
+        "item_cBindq": {
+          "type": "item",
+          "settings": {
+            "title": "Is the application painful?",
+            "content": "<p>No. The micro-needles are extremely fine and designed for a comfortable, non-invasive experience. You may feel a slight tingling sensation during the first minutes.</p>"
+          }
+        },
+        "item_KRL6ck": {
+          "type": "item",
+          "settings": {
+            "title": "When will I see results?",
+            "content": "<p>Many users notice smoother and more refreshed-looking skin after the first use. For optimal results, consistent use over several weeks is recommended.</p>"
+          }
+        },
+        "item_UPcBUW": {
+          "type": "item",
+          "settings": {
+            "title": "How often should I use them?",
+            "content": "<p>We recommend using the patches 1–2 times per week as part of your regular skincare routine.</p>"
+          }
+        },
+        "item_HYTC67": {
+          "type": "item",
+          "settings": {
+            "title": "How long should I leave them on?",
+            "content": "<p>Apply to clean, dry skin and leave on for at least 2 hours or overnight for optimal absorption.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_VYXiUB",
+        "item_cBindq",
+        "item_KRL6ck",
+        "item_UPcBUW",
+        "item_HYTC67"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "FAQ",
+        "content": "",
+        "team_avatar_width": 160,
+        "support_hours": "",
+        "answer_time": "",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "#fdefef",
+        "accordion_text_color": ""
+      }
+    },
+    "contact_baeJqM": {
+      "type": "contact",
+      "name": "Contact form",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "Do you have any question?",
+        "content": "<p>Our customer support team is available 7 days a week. Average response time: 24 hours.</p>",
+        "text_position": "center",
+        "contact_form_size": "large",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "contact_background": "#fdefef",
+        "contact_text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
     }
   },
   "order": [
@@ -604,6 +781,10 @@
     "multiple_images_with_text_yM7mCp",
     "before_after_image_Y4w9Jq",
     "multi_column_jd6acq",
-    "multi_column_Q6AThT"
+    "multi_column_Q6AThT",
+    "apps_rr6cge",
+    "tabs_YKzwia",
+    "faq_jbxKhh",
+    "contact_baeJqM"
   ]
 }
