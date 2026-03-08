@@ -12,33 +12,59 @@
     "image_with_text_overlay_ctfJ7C": {
       "type": "image-with-text-overlay",
       "blocks": {
-        "slide_Uamgpy": {
-          "type": "slide",
+        "heading_8Bhe7H": {
+          "type": "heading",
           "settings": {
-            "heading": ""
-          }
-        },
-        "slide_xNWywj": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/korean-skincare-under-eye-gel-patches-glass-skinkorean-skincare-under-eye-gel-patches-glass-skin_943b8c7e-06a7-4a5a-b0a9-ef1e8743be59.png",
-            "heading": ""
-          }
-        },
-        "slide_d74zpP": {
-          "type": "slide",
-          "settings": {
-            "heading": ""
+            "text": "Heading",
+            "heading_tag": "h1"
           }
         }
       },
       "block_order": [
-        "slide_Uamgpy",
-        "slide_xNWywj",
-        "slide_d74zpP"
+        "heading_8Bhe7H"
       ],
       "name": "Image with text overlay",
-      "settings": {}
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "autoplay_speed": 5,
+        "image": "shopify://shop_images/Lymphatic_drainage_brush.png",
+        "mobile_image": "shopify://shop_images/Soin_du_visage_avec_gua_sha.png",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30,
+        "image_2": "shopify://shop_images/korean-skincare-under-eye-gel-patches-glass-skinkorean-skincare-under-eye-gel-patches-glass-skin_943b8c7e-06a7-4a5a-b0a9-ef1e8743be59.png",
+        "subheading_2": "Subheading",
+        "heading_2": "Heading",
+        "heading_tag_2": "h1",
+        "content_2": "<p>Use this text to share information about your brand with your customers.</p>",
+        "button_style_2": "fill",
+        "button_size_2": "lg",
+        "button_text_2": "Button text",
+        "button_url_2": "",
+        "button_background_2": "",
+        "button_text_color_2": "",
+        "text_color_2": "#ffffff",
+        "overlay_color_2": "#000000",
+        "overlay_opacity_2": 30,
+        "subheading_3": "Subheading",
+        "heading_3": "Heading",
+        "heading_tag_3": "h1",
+        "content_3": "<p>Use this text to share information about your brand with your customers.</p>",
+        "button_style_3": "fill",
+        "button_size_3": "lg",
+        "button_text_3": "Button text",
+        "button_url_3": "",
+        "button_background_3": "",
+        "button_text_color_3": "",
+        "text_color_3": "#ffffff",
+        "overlay_color_3": "#000000",
+        "overlay_opacity_3": 30
+      }
     },
     "logo_carousel_custom_cDhxUE": {
       "type": "logo-carousel-custom",
@@ -306,7 +332,6 @@
     },
     "featured_collection_qxD4zN": {
       "type": "featured-collection",
-      "disabled": true,
       "name": "Featured collection",
       "settings": {
         "collection": "",
@@ -315,7 +340,8 @@
           "korean-black-rice-peel-shot-exfoliating-serum",
           "korean-yellow-rice-peel-shot-exfoliating-serum",
           "skineo-face-brush",
-          "dr-melaxin-peel-shot-exfoliating-rice-serum"
+          "dr-melaxin-peel-shot-exfoliating-rice-serum",
+          "microneedle-patches-for-dark-circles"
         ],
         "full_width": true,
         "stack_products": false,
