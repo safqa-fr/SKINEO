@@ -298,7 +298,6 @@
         "image_zwkWUi": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Securite_livraison_gratuite_garantie_remboursement.png",
             "alignment": "center",
             "max_width": 300
           }
@@ -345,10 +344,37 @@
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
       }
+    },
+    "rich_text_ALhkri": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8V44dA": {
+          "type": "heading",
+          "settings": {
+            "text": "Why choose Skineo Microneedle Eye Patches?",
+            "heading_tag": "h2",
+            "text_color": "#2b2b2b",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_8V44dA"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
     "main",
-    "featured_product_86GpzL"
+    "featured_product_86GpzL",
+    "rich_text_ALhkri"
   ]
 }
