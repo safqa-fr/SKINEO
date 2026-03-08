@@ -381,7 +381,7 @@
             "image_rotation_degrees": 0,
             "subheading": "",
             "title": "",
-            "content": "<p>✓ <strong>DE-PUFFS IN MINUTES</strong><br/>Helps reduce facial puffiness for a fresher, more rested look.</p><p>✓ <strong>SMOOTHER-LOOKING SKIN</strong><br/>Skin appears more even and refined after just a few gentle strokes.</p><p>✓ <strong>ULTRA-SOFT TOUCH</strong><br/>Designed to glide comfortably without pulling, pain, or irritation.</p>",
+            "content": "<p>✓ <strong>REDUCES DARK CIRCLES</strong><br/>Helps visibly diminish under-eye dark circles for a brighter, more refreshed look.</p><p>✓ <strong>DE-PUFFS TIRED EYES</strong><br/>Reduces puffiness and eye bags to restore a well-rested appearance.</p><p>✓ <strong>DEEP INGREDIENT ABSORPTION</strong><br/>Microneedle technology allows active ingredients to penetrate deeper into the skin.</p>",
             "button_url": "",
             "button_text": ""
           }
@@ -441,6 +441,160 @@
         "drag_cursor_background": "#ffffff",
         "drag_cursor_color": "#000000"
       }
+    },
+    "multi_column_jd6acq": {
+      "type": "multi-column",
+      "blocks": {
+        "item_imKkcx": {
+          "type": "item",
+          "settings": {
+            "column_size": "4",
+            "title": "93%",
+            "heading_tag": "h2",
+            "content": "<p>Reported visibly reduced under-eye bags and puffiness.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_j8AW6A": {
+          "type": "item",
+          "settings": {
+            "column_size": "4",
+            "title": "90%",
+            "heading_tag": "h2",
+            "content": "<p>Noticed smoother, brighter-looking under-eye skin.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_Cd6LtN": {
+          "type": "item",
+          "settings": {
+            "column_size": "4",
+            "title": "88%",
+            "heading_tag": "h2",
+            "content": "<p>Saw an improvement in skin firmness and elasticity.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_kyPWbz": {
+          "type": "item",
+          "settings": {
+            "column_size": "4",
+            "title": "91%",
+            "heading_tag": "h2",
+            "content": "<p>Said they looked more rested and refreshed.<br/></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_imKkcx",
+        "item_j8AW6A",
+        "item_Cd6LtN",
+        "item_kyPWbz"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "center",
+        "autoplay": true,
+        "autoplay_delay": 5,
+        "pause_on_hover": true,
+        "subheading": "",
+        "title": "Clinically Tested Results",
+        "content": "<p>Based on an independent user study with 984 participants after 30 days.</p>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "multi_column_Q6AThT": {
+      "type": "multi-column",
+      "blocks": {
+        "item_KwzVQ9": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/0302.mp4",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_RErx6T": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/snaptik_7382897044517637408_v3.mp4",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_fPVw4K": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/0302 (2).mp4",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_4RfJFc": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/snaptik_7392604329603026207_v3.mp4",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_KwzVQ9",
+        "item_RErx6T",
+        "item_fPVw4K",
+        "item_4RfJFc"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "center",
+        "autoplay": true,
+        "autoplay_delay": 5,
+        "pause_on_hover": true,
+        "subheading": "",
+        "title": "They say it better than we do",
+        "content": "<p>⭐ <strong>4.8/5</strong> – Loved by over 15,869 customers</p>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
@@ -448,6 +602,8 @@
     "featured_product_86GpzL",
     "rich_text_ALhkri",
     "multiple_images_with_text_yM7mCp",
-    "before_after_image_Y4w9Jq"
+    "before_after_image_Y4w9Jq",
+    "multi_column_jd6acq",
+    "multi_column_Q6AThT"
   ]
 }
