@@ -257,6 +257,7 @@
         },
         "variant_picker_b6jh3N": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "hide_sold_out_variants": false,
             "stack_blocks": false,
