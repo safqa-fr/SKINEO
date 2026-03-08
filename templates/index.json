@@ -30,7 +30,7 @@
             "button_background": "#6e4a2f",
             "button_text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 10,
+            "overlay_opacity": 0,
             "background": "",
             "background_gradient": ""
           }
@@ -53,7 +53,7 @@
             "button_background": "#6e4a2f",
             "button_text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 10,
+            "overlay_opacity": 0,
             "background": "",
             "background_gradient": ""
           }
