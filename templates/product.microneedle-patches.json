@@ -298,6 +298,7 @@
         "image_zwkWUi": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Secure_payment_free_shipping_moneyback.png",
             "alignment": "center",
             "max_width": 300
           }
@@ -598,25 +599,6 @@
     },
     "apps_rr6cge": {
       "type": "apps",
-      "blocks": {
-        "loox_reviews_loox_agg_section_WczBpX": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "settings": {
-            "reviews_to_display": "",
-            "default_tab": "automatic",
-            "only_photos": false,
-            "hide_thumbnails": false,
-            "product_handle": "",
-            "aggregated": true,
-            "data-limit": 8,
-            "maxwidth": 1080,
-            "is_sample": true
-          }
-        }
-      },
-      "block_order": [
-        "loox_reviews_loox_agg_section_WczBpX"
-      ],
       "settings": {
         "full_width": true,
         "remove_vertical_spacing": false,
