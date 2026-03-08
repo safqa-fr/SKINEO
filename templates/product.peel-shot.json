@@ -347,6 +347,36 @@
         "input_text_color": ""
       }
     },
+    "featured_collection_kCqUqa": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "",
+        "products": [
+          "skineo-face-brush",
+          "microneedle-patches-for-dark-circles",
+          "bio-collagen-mask"
+        ],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_count": 6,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
     "rich_text_NTbRkD": {
       "type": "rich-text",
       "blocks": {
@@ -798,6 +828,7 @@
   "order": [
     "main",
     "featured_product_GnXUix",
+    "featured_collection_kCqUqa",
     "rich_text_NTbRkD",
     "multiple_images_with_text_t3gKjK",
     "scrolling_text_cJADV4",
