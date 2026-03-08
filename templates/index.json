@@ -272,6 +272,7 @@
         "image_R3wAFc": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Secure_payment_free_shipping_moneyback.png",
             "alignment": "center",
             "max_width": 300
           }
