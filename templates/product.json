@@ -217,16 +217,16 @@
         "tab_qih8hJ": {
           "type": "tab",
           "settings": {
-            "title": "Tab 2",
-            "content": "<p>Describe a product, share announcements, or welcome customers to your store.</p>",
+            "title": "Is the Peel Shot suitable for my skin?",
+            "content": "<p>Yes! The Peel Shot is suitable for all skin types, including sensitive skin. </p><p>Choose <strong>White Rice</strong> for sensitive, normal, or dry skin with ultra-gentle exfoliation, or <strong>Black Rice</strong> for normal to oily or blemish-prone skin with a more powerful, purifying action. If you’re unsure, start with the White Rice version and test on a small area first. </p><p>If you have very sensitive skin or a skin condition, we recommend consulting your dermatologist before use.<br/><br/></p>",
             "page": ""
           }
         },
         "tab_fjmRgM": {
           "type": "tab",
           "settings": {
-            "title": "Tab 3",
-            "content": "<p>Share information about your shipping rates, return policy or contact information.</p>",
+            "title": "Free Delivery & 30-Day Guarantee ✅",
+            "content": "<p><strong>Home delivery is free.</strong> Depending on order volume, estimated delivery time is <strong>6–11 business days </strong></p><p>You have <strong>30 days to change your mind after receiving your order</strong>.<br/><br/><br/></p>",
             "page": ""
           }
         }
@@ -241,7 +241,7 @@
       "settings": {
         "full_width": true,
         "content_size": "medium",
-        "subheading": "Subheading",
+        "subheading": "",
         "title": "Heading",
         "text_alignment": "center",
         "first_tab_open": false,
