@@ -61,6 +61,7 @@
         "image_bmtVrz": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/65.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -74,7 +75,7 @@
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "overlay_color": "#000000",
-            "overlay_opacity": 30,
+            "overlay_opacity": 10,
             "background": "",
             "background_gradient": ""
           }
