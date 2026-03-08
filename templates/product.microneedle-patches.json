@@ -289,8 +289,8 @@
           "settings": {
             "show_payment_button": true,
             "show_gift_card_recipient": true,
-            "atc_button_background": "#fdefef",
-            "atc_button_text_color": "#1a1a1a",
+            "atc_button_background": "#f3e8dc",
+            "atc_button_text_color": "#6e4a2f",
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
@@ -730,7 +730,7 @@
         "heading_gradient": "",
         "button_background": "",
         "button_text_color": "",
-        "accordion_background": "#fdefef",
+        "accordion_background": "#f3e8dc",
         "accordion_text_color": ""
       }
     },
@@ -749,7 +749,7 @@
         "text_color": "",
         "heading_color": "",
         "heading_gradient": "",
-        "contact_background": "#fdefef",
+        "contact_background": "#f3e8dc",
         "contact_text_color": "",
         "button_background": "",
         "button_text_color": ""
