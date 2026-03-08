@@ -346,6 +346,36 @@
         "input_text_color": ""
       }
     },
+    "featured_collection_cGrpUh": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "",
+        "products": [
+          "dr-melaxin-peel-shot-exfoliating-rice-serum",
+          "bio-collagen-mask",
+          "skineo-face-brush"
+        ],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_count": 3,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
     "rich_text_ALhkri": {
       "type": "rich-text",
       "blocks": {
@@ -591,7 +621,7 @@
         "pause_on_hover": true,
         "subheading": "",
         "title": "They say it better than we do",
-        "content": "<p>⭐ <strong>4.8/5</strong> – Loved by over 15,869 customers</p>",
+        "content": "<p>⭐ <strong>4.9/5</strong> – Loved by over 15,869 customers</p>",
         "background": "",
         "background_gradient": "",
         "text_color": ""
@@ -771,36 +801,6 @@
         "contact_text_color": "",
         "button_background": "",
         "button_text_color": ""
-      }
-    },
-    "featured_collection_cGrpUh": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "collection": "",
-        "products": [
-          "dr-melaxin-peel-shot-exfoliating-rice-serum",
-          "bio-collagen-mask",
-          "skineo-face-brush"
-        ],
-        "full_width": true,
-        "stack_products": true,
-        "show_progress_bar": false,
-        "products_count": 3,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 3,
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "link_url": "",
-        "link_text": "View all",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
       }
     }
   },
