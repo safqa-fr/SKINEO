@@ -39,7 +39,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/korean-skincare-under-eye-gel-patches-glass-skinkorean-skincare-under-eye-gel-patches-glass-skin_943b8c7e-06a7-4a5a-b0a9-ef1e8743be59.png",
-            "mobile_image": "shopify://shop_images/korean-skincare-under-eye-gel-patches-glass-skin_2f8f4e2c-8eca-450a-b948-900d17ded4fa.png",
+            "mobile_image": "shopify://shop_images/banniere_2.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
