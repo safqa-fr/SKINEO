@@ -9,57 +9,91 @@
  */
 {
   "sections": {
-    "image_with_text_overlay_ctfJ7C": {
-      "type": "image-with-text-overlay",
-      "name": "Image with text overlay",
+    "slideshow_NBpptz": {
+      "type": "slideshow",
+      "blocks": {
+        "image_rxpqK7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Lymphatic_drainage_brush.png",
+            "mobile_image": "shopify://shop_images/lymphatic-drainage-face-brush-mobile.webp",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "Tell your story",
+            "title": "Slide 1",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "image_GqyGCA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/korean-skincare-under-eye-gel-patches-glass-skinkorean-skincare-under-eye-gel-patches-glass-skin_943b8c7e-06a7-4a5a-b0a9-ef1e8743be59.png",
+            "mobile_image": "shopify://shop_images/korean-skincare-under-eye-gel-patches-glass-skin_2f8f4e2c-8eca-450a-b948-900d17ded4fa.png",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_text_position": "sm:place-self-end-center sm:text-center",
+            "subheading": "Tell your story",
+            "title": "Slide 2",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "image_bmtVrz": {
+          "type": "image",
+          "settings": {
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "Tell your story",
+            "title": "Slide title",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_rxpqK7",
+        "image_GqyGCA",
+        "image_bmtVrz"
+      ],
+      "name": "Slideshow",
       "settings": {
         "full_width": true,
-        "allow_transparent_header": false,
-        "enable_parallax": false,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
         "image_size": "auto",
-        "autoplay_speed": 5,
-        "mobile_text_position": "place-self-center text-center",
-        "desktop_text_position": "sm:place-self-center sm:text-center",
-        "subheading_1": "Subheading",
-        "heading_1": "Heading",
-        "heading_tag_1": "h1",
-        "content_1": "<p>Use this text to share information about your brand with your customers.</p>",
-        "button_style_1": "fill",
-        "button_size_1": "lg",
-        "button_text_1": "Button text",
-        "button_url_1": "",
-        "button_background_1": "",
-        "button_text_color_1": "",
-        "text_color_1": "#ffffff",
-        "overlay_color_1": "#000000",
-        "overlay_opacity_1": 30,
-        "image_2": "shopify://shop_images/korean-skincare-under-eye-gel-patches-glass-skinkorean-skincare-under-eye-gel-patches-glass-skin_943b8c7e-06a7-4a5a-b0a9-ef1e8743be59.png",
-        "subheading_2": "Subheading",
-        "heading_2": "Heading",
-        "heading_tag_2": "h1",
-        "content_2": "<p>Use this text to share information about your brand with your customers.</p>",
-        "button_style_2": "fill",
-        "button_size_2": "lg",
-        "button_text_2": "Button text",
-        "button_url_2": "",
-        "button_background_2": "",
-        "button_text_color_2": "",
-        "text_color_2": "#ffffff",
-        "overlay_color_2": "#000000",
-        "overlay_opacity_2": 30,
-        "subheading_3": "Subheading",
-        "heading_3": "Heading",
-        "heading_tag_3": "h1",
-        "content_3": "<p>Use this text to share information about your brand with your customers.</p>",
-        "button_style_3": "fill",
-        "button_size_3": "lg",
-        "button_text_3": "Button text",
-        "button_url_3": "",
-        "button_background_3": "",
-        "button_text_color_3": "",
-        "text_color_3": "#ffffff",
-        "overlay_color_3": "#000000",
-        "overlay_opacity_3": 30
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "#F2F2F2",
+        "background_gradient": ""
       }
     },
     "logo_carousel_custom_cDhxUE": {
@@ -198,7 +232,7 @@
     }
   },
   "order": [
-    "image_with_text_overlay_ctfJ7C",
+    "slideshow_NBpptz",
     "logo_carousel_custom_cDhxUE",
     "featured_collection_gtmkEH",
     "contact_AVdaDC"
