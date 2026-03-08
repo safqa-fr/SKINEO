@@ -259,7 +259,7 @@
           "type": "variant_picker",
           "settings": {
             "hide_sold_out_variants": false,
-            "stack_blocks": true,
+            "stack_blocks": false,
             "selector_style": "block",
             "swatch_selector_style": "swatch",
             "variant_image_options": "",
