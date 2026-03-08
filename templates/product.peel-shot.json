@@ -541,15 +541,8 @@
         "item_cMGUin": {
           "type": "item",
           "settings": {
-            "title": "How long will it take to get my orders?",
+            "title": "Is it painful?",
             "content": "<p><strong>No, not at all! In fact, it’s the complete opposite of Biore strips or manual extractions.</strong></p><p><strong>What you feel:</strong></p><ul><li>A soft, creamy texture</li><li>A pleasant massage</li><li>A slight warming sensation (normal — the enzymes are working)</li><li>Fresh, soothed skin after rinsing<br/></li></ul><p><strong>What you do NOT feel:</strong></p><ul><li>❌ No stinging</li><li>❌ No burning (like strong acids)</li><li>❌ No pulling (like pore strips)</li><li>❌ No redness afterward<br/></li></ul><p>If you experience irritation, it usually means you’re massaging too firmly or using it too often (max 3× per week).</p>"
-          }
-        },
-        "item_Hgfkke": {
-          "type": "item",
-          "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
           }
         }
       },
@@ -558,18 +551,17 @@
         "item_MpqFJb",
         "item_pYRPQ4",
         "item_3Qh9zX",
-        "item_cMGUin",
-        "item_Hgfkke"
+        "item_cMGUin"
       ],
       "name": "FAQ",
       "settings": {
         "full_width": true,
         "subheading": "",
         "title": "FAQ",
-        "content": "<p>Use this text to share information about your product or shipping policies.</p>",
+        "content": "",
         "team_avatar_width": 160,
-        "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
-        "answer_time": "Average answer time: 24h",
+        "support_hours": "",
+        "answer_time": "",
         "button_text": "",
         "button_url": "",
         "text_position": "center",
@@ -580,7 +572,7 @@
         "heading_gradient": "",
         "button_background": "",
         "button_text_color": "",
-        "accordion_background": "",
+        "accordion_background": "#f3e8dc",
         "accordion_text_color": ""
       }
     }
