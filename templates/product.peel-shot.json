@@ -465,7 +465,7 @@
           "type": "tab",
           "settings": {
             "title": "Try it risk-free for 30 days",
-            "content": "<p>Use this text to share information about your brand with your customers.</p>",
+            "content": "<p>If you are not satisfied, you may return your <strong>Peel Shot within 30 days</strong>, provided the product is <strong>unopened and unused</strong>.<br/>Due to hygiene reasons, <strong>opened products are not eligible for refunds</strong>.</p>",
             "page": ""
           }
         },
@@ -506,6 +506,83 @@
         "heading_color": "",
         "heading_gradient": ""
       }
+    },
+    "faq_dPNyz3": {
+      "type": "faq",
+      "blocks": {
+        "item_GM8d9A": {
+          "type": "item",
+          "settings": {
+            "title": "What is Peel Shot?",
+            "content": "<p><strong>Peel Shot is a next-generation Korean enzymatic exfoliant that removes dead skin cells, unclogs pores, and smooths skin texture in just 5 minutes.</strong></p><p>Unlike mechanical scrubs that can be harsh on the skin, our gentle formula enriched with rice water and niacinamide respects even sensitive skin while delivering visible results from the very first use.</p><p><strong>Available in two versions:</strong> Rice (gentle) and Black Rice (intensive).</p>"
+          }
+        },
+        "item_MpqFJb": {
+          "type": "item",
+          "settings": {
+            "title": "Does it work on sensitive skin?",
+            "content": "<p><strong>Yes, absolutely! It’s specifically designed for that.</strong></p><p>Our formula uses <strong>enzymatic exfoliation</strong> (not mechanical exfoliation like grainy scrubs), meaning it dissolves dead skin cells without rubbing or irritating the skin.</p><p><strong>Rice Version (White Rice):</strong> Specially formulated for sensitive, reactive skin or skin prone to redness. Ultra-gentle and soothing.</p><p>Thousands of customers with sensitive skin use it with no irritation. If you’re unsure, we recommend doing a patch test on a small area before your first full application.</p>"
+          }
+        },
+        "item_pYRPQ4": {
+          "type": "item",
+          "settings": {
+            "title": "What’s the difference compared to traditional scrubs?",
+            "content": "<p><strong>Mechanical scrubs (grainy scrubs):</strong></p><p>❌ Rub and damage the skin<br/>❌ Create invisible micro-tears<br/>❌ Cause redness and irritation<br/>❌ Only provide temporary results</p><p><strong>Our Peel Shot (enzymatic exfoliation):</strong></p><p>✅ Gently dissolves dead skin cells<br/>✅ Respects the skin barrier<br/>✅ Suitable for sensitive skin<br/>✅ Visible, long-lasting results<br/>✅ You can actually SEE impurities being removed (pilling effect)</p><p>Peel Shot combines professional-level effectiveness with absolute gentleness.<br/><br/>That’s why it’s even recommended by dermatologists.</p>"
+          }
+        },
+        "item_3Qh9zX": {
+          "type": "item",
+          "settings": {
+            "title": "Is it really cost-effective?",
+            "content": "<p><strong>Yes—and here’s why:</strong></p><p>One bottle = <strong>2 months of use</strong></p><ul><li>$0.50 per use</li><li>$15/month for visibly transformed skin<br/></li></ul><p><strong>Compared to:</strong></p><ul><li>One in-clinic cleansing treatment: $<strong>60–$80</strong> (results last 1 week)</li><li>Nose strips: $<strong>15/month</strong> (painful and ineffective)</li><li>5–10 different products: $<strong>100–$200</strong> (that don’t work)<br/></li></ul><p><strong>The math is simple:</strong><br/>One single product replaces an entire ineffective routine and costs <strong>27× less</strong> than a professional in-clinic treatment.</p>"
+          }
+        },
+        "item_cMGUin": {
+          "type": "item",
+          "settings": {
+            "title": "How long will it take to get my orders?",
+            "content": "<p><strong>No, not at all! In fact, it’s the complete opposite of Biore strips or manual extractions.</strong></p><p><strong>What you feel:</strong></p><ul><li>A soft, creamy texture</li><li>A pleasant massage</li><li>A slight warming sensation (normal — the enzymes are working)</li><li>Fresh, soothed skin after rinsing<br/></li></ul><p><strong>What you do NOT feel:</strong></p><ul><li>❌ No stinging</li><li>❌ No burning (like strong acids)</li><li>❌ No pulling (like pore strips)</li><li>❌ No redness afterward<br/></li></ul><p>If you experience irritation, it usually means you’re massaging too firmly or using it too often (max 3× per week).</p>"
+          }
+        },
+        "item_Hgfkke": {
+          "type": "item",
+          "settings": {
+            "title": "Any question?",
+            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_GM8d9A",
+        "item_MpqFJb",
+        "item_pYRPQ4",
+        "item_3Qh9zX",
+        "item_cMGUin",
+        "item_Hgfkke"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "FAQ",
+        "content": "<p>Use this text to share information about your product or shipping policies.</p>",
+        "team_avatar_width": 160,
+        "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
+        "answer_time": "Average answer time: 24h",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
     }
   },
   "order": [
@@ -515,6 +592,7 @@
     "multiple_images_with_text_t3gKjK",
     "scrolling_text_cJADV4",
     "video_nMDd6m",
-    "tabs_LKUMmR"
+    "tabs_LKUMmR",
+    "faq_dPNyz3"
   ]
 }
