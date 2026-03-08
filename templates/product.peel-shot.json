@@ -418,12 +418,103 @@
         "button_background": "",
         "button_text_color": ""
       }
+    },
+    "scrolling_text_cJADV4": {
+      "type": "scrolling-text",
+      "name": "Scrolling text",
+      "settings": {
+        "full_width": true,
+        "text": "An innovative Korean technique",
+        "text_size": "small",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 10,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "#6e4a2f",
+        "text_gradient": ""
+      }
+    },
+    "tabs_LKUMmR": {
+      "type": "tabs",
+      "blocks": {
+        "tab_GBQzNE": {
+          "type": "tab",
+          "settings": {
+            "title": "White Rice or Black Rice?",
+            "content": "<ul><li><strong>White Rice</strong><br/>For sensitive, normal, or dry skin.<br/>Gentle, hydrating exfoliation that delivers instant glow, refines skin texture, boosts hydration, and is safe for sensitive skin.<br/><strong>Use:</strong> 2–3 times per week.</li><li><strong>Black Rice</strong><br/>For oily, combination, or blemish-prone skin.<br/>Intensive, purifying exfoliation that deeply cleans pores, helps reduce blackheads, controls excess oil, and minimizes the look of enlarged pores.<br/><strong>Use:</strong> 1–2 times per week (focus on problem areas).</li><li><strong>Our tip:</strong><br/>Not sure which one to choose? Start with <strong>White Rice</strong> for sensitive or normal skin. Choose <strong>Black Rice</strong> if you struggle with enlarged pores or excess oil. You can also alternate between both depending on your skin’s needs.</li></ul><p><strong>Recommended use:</strong> 2–3 times per week</p><p><em>Our Recommendation<br/>Not sure which one to choose?<br/>Start with </em><em><strong>White Rice</strong></em><em> if you have sensitive or normal skin.<br/>Choose </em><em><strong>Black Rice</strong></em><em> if you’re dealing with enlarged pores or excess oil.<br/></em><em><strong>Pro tip:</strong></em><em> You can also alternate between the two depending on your skin’s needs!</em></p>",
+            "page": ""
+          }
+        },
+        "tab_D4FYVk": {
+          "type": "tab",
+          "settings": {
+            "title": "How to Use the Peel Shot ?",
+            "content": "<p>Use this text to share information about your brand with your customers.</p>",
+            "page": ""
+          }
+        },
+        "tab_cqnERK": {
+          "type": "tab",
+          "settings": {
+            "title": "Is the Peel Shot suitable for my skin?",
+            "content": "<p>Describe a product, share announcements, or welcome customers to your store.</p>",
+            "page": ""
+          }
+        },
+        "tab_3GDbNg": {
+          "type": "tab",
+          "settings": {
+            "title": "Tab 3",
+            "content": "<p>Share information about your shipping rates, return policy or contact information.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_GBQzNE",
+        "tab_D4FYVk",
+        "tab_cqnERK",
+        "tab_3GDbNg"
+      ],
+      "name": "Tabs",
+      "settings": {
+        "full_width": true,
+        "content_size": "medium",
+        "subheading": "Subheading",
+        "title": "Heading",
+        "text_alignment": "center",
+        "first_tab_open": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "video_nMDd6m": {
+      "type": "video",
+      "name": "Video",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "autoplay": false,
+        "video_size": "auto",
+        "video": "shopify://files/videos/4be448cdf24347cba1f271d477a05d31.HD-1080p-7.2Mbps-61073578.mp4",
+        "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
     }
   },
   "order": [
     "main",
     "featured_product_GnXUix",
     "rich_text_NTbRkD",
-    "multiple_images_with_text_t3gKjK"
+    "multiple_images_with_text_t3gKjK",
+    "scrolling_text_cJADV4",
+    "tabs_LKUMmR",
+    "video_nMDd6m"
   ]
 }
