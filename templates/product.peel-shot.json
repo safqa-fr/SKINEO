@@ -346,10 +346,84 @@
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
       }
+    },
+    "rich_text_NTbRkD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_EnNbB3": {
+          "type": "heading",
+          "settings": {
+            "text": "Why choose this Peel Shot?",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_EnNbB3"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "multiple_images_with_text_t3gKjK": {
+      "type": "multiple-images-with-text",
+      "blocks": {
+        "item_bPttJ6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/25.png",
+            "image_rotation_degrees": -2,
+            "subheading": "",
+            "title": "",
+            "content": "<p><strong>✓ BLACKHEADS REMOVED IN 5 MINUTES</strong><br/>Visible results after the first use.<br/><br/><strong>✓ RESTORE YOUR CONFIDENCE EVERY DAY</strong><br/>Show your bare face with no makeup needed.<br/><br/><strong>✓ LONG-LASTING RESULTS</strong><br/>Enjoy clearer skin week after week.</p>",
+            "button_url": "",
+            "button_text": ""
+          }
+        },
+        "item_JmWxPf": {
+          "type": "item",
+          "settings": {
+            "image_rotation_degrees": 1.5,
+            "subheading": "",
+            "title": "",
+            "content": "<p><strong>✓ THE BREAKTHROUGH SOLUTION</strong><br/>Ditch scrubs, acids, and pore strips that don’t work.<br/><br/><strong>✓ PROFESSIONAL QUALITY AT HOME</strong><br/>Spa-like results without leaving your house.<br/><br/><strong>✓ GENTLE FOR ALL SKIN TYPES</strong><br/>Safe and effective, even for sensitive skin.</p>",
+            "button_url": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_bPttJ6",
+        "item_JmWxPf"
+      ],
+      "name": "Multiple images with text",
+      "settings": {
+        "full_width": true,
+        "images_layout": "stacked",
+        "collage_images_alignment": "middle",
+        "autoplay": true,
+        "autoplay_delay": 5,
+        "pause_on_hover": true,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
     }
   },
   "order": [
     "main",
-    "featured_product_GnXUix"
+    "featured_product_GnXUix",
+    "rich_text_NTbRkD",
+    "multiple_images_with_text_t3gKjK"
   ]
 }
