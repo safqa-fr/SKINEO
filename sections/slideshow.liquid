@@ -15,10 +15,7 @@ CSS
     --slideshow-background: {{ section.blocks.first.settings.background_gradient | default: section.blocks.first.settings.background | default: section.settings.background_gradient | default: section.settings.background }};
     --slideshow-controls-background: {{ controls_background.rgb }};
     --slideshow-controls-color: {{ controls_color.rgb }};
-
-    {%- if section.settings.allow_transparent_header -%}
-      margin-block-start: calc(-1 * var(--header-height) * var(--section-is-first));
-    {%- endif -%}
+    margin-block-start: 0;
   }
 
   {%- for block in section.blocks -%}
@@ -35,6 +32,15 @@ CSS
       --slideshow-slide-controls-color: {{ controls_color.rgb }};
     }
   {%- endfor -%}
+
+  #shopify-section-{{ section.id }} .slideshow__paragraph {
+    margin-top: 12px;
+    max-width: 700px;
+  }
+
+  #shopify-section-{{ section.id }} .slideshow__paragraph p {
+    margin: 0;
+  }
 </style>
 
 {%- comment -%}
@@ -45,7 +51,7 @@ LIQUID
 
 {%- assign slideshow_id = 'slideshow-' | append: section.id -%}
 
-<x-slideshow class="slideshow {% unless section.settings.full_width %}slideshow--boxed{% endunless %} {% if section.blocks.size > 1 %}slideshow--multiple-slides{% endif %}" {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %}>
+<x-slideshow class="slideshow {% unless section.settings.full_width %}slideshow--boxed{% endunless %} {% if section.blocks.size > 1 %}slideshow--multiple-slides{% endif %}">
   {%- unless section.settings.full_width -%}
     <span class="slideshow__slide-background"></span>
   {%- endunless -%}
@@ -124,6 +130,12 @@ LIQUID
                 <p class="{{ block.settings.heading_tag }}" data-sequence="heading">
                   {%- render 'styled-text', content: block.settings.title, apparition_effect: true -%}
                 </p>
+              {%- endif -%}
+
+              {%- if block.settings.paragraph != blank -%}
+                <div class="slideshow__paragraph rte" data-sequence="text">
+                  {{ block.settings.paragraph }}
+                </div>
               {%- endif -%}
 
               {%- if block.settings.button_text != blank -%}
@@ -449,6 +461,12 @@ LIQUID
           "default": "Slide title"
         },
         {
+          "type": "richtext",
+          "id": "paragraph",
+          "label": "Paragraph",
+          "default": "<p>Add a short paragraph here.</p>"
+        },
+        {
           "type": "select",
           "id": "heading_tag",
           "label": "Heading size",
@@ -674,6 +692,12 @@ LIQUID
           "id": "title",
           "label": "Heading",
           "default": "Slide title"
+        },
+        {
+          "type": "richtext",
+          "id": "paragraph",
+          "label": "Paragraph",
+          "default": "<p>Add a short paragraph here.</p>"
         },
         {
           "type": "select",
