@@ -419,6 +419,31 @@
         "button_text_color": ""
       }
     },
+    "before_after_image_Vhainx": {
+      "type": "before-after-image",
+      "name": "Before/after image",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "Before/after",
+        "content": "<p>Showcase your product benefit by using before/after image comparison.</p>",
+        "before_image": "shopify://shop_images/2026_20_56_42.png",
+        "after_image": "shopify://shop_images/2026_20_56_45.png",
+        "expand_image": false,
+        "text_position": "center",
+        "before_after_text_position": "top",
+        "before_text": "Before",
+        "after_text": "After",
+        "drag_initial_position": 50,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "before_text_color": "#ffffff",
+        "after_text_color": "#ffffff",
+        "drag_cursor_background": "#ffffff",
+        "drag_cursor_color": "#000000"
+      }
+    },
     "scrolling_text_cJADV4": {
       "type": "scrolling-text",
       "name": "Scrolling text",
@@ -435,19 +460,112 @@
         "text_gradient": ""
       }
     },
-    "video_nMDd6m": {
-      "type": "video",
-      "name": "Video",
+    "multi_column_G4VY83": {
+      "type": "multi-column",
+      "blocks": {
+        "item_yAANj9": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/ssstik.io_@camilathinadiaz_1772999433664.mp4",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_7JQ6m6": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/ssstik.io_@juliasfavoritefinds_1772999187639.mp4",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_wXAMz8": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/ssstik.io_@gracieapproved_1772999395775.mp4",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_Hc7zf3": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/ssstik.io_1772999296275.mp4",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_yAANj9",
+        "item_7JQ6m6",
+        "item_wXAMz8",
+        "item_Hc7zf3"
+      ],
+      "name": "Multi-column",
       "settings": {
         "full_width": true,
-        "allow_transparent_header": false,
-        "autoplay": false,
-        "video_size": "auto",
-        "video": "shopify://files/videos/4be448cdf24347cba1f271d477a05d31.HD-1080p-7.2Mbps-61073578.mp4",
-        "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 30
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "center",
+        "autoplay": true,
+        "autoplay_delay": 5,
+        "pause_on_hover": true,
+        "subheading": "",
+        "title": "Over 7,000 women have already adopted it — what about you?",
+        "content": "<p>⭐ <strong>4.8/5</strong> – Loved by over 1,000 customers !</p>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "1772997071621df11c": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_dynamic_section_ReGM6K": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 8,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_dynamic_section_ReGM6K"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
       }
     },
     "tabs_LKUMmR": {
@@ -575,6 +693,27 @@
         "accordion_background": "#f3e8dc",
         "accordion_text_color": ""
       }
+    },
+    "contact_FL9QJg": {
+      "type": "contact",
+      "name": "Contact form",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "Do you have any question?",
+        "content": "<p>Our customer support team is available 7 days a week. Average response time: 24 hours.<br/></p>",
+        "text_position": "center",
+        "contact_form_size": "large",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "contact_background": "#f3e8dc",
+        "contact_text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
     }
   },
   "order": [
@@ -582,9 +721,12 @@
     "featured_product_GnXUix",
     "rich_text_NTbRkD",
     "multiple_images_with_text_t3gKjK",
+    "before_after_image_Vhainx",
     "scrolling_text_cJADV4",
-    "video_nMDd6m",
+    "multi_column_G4VY83",
+    "1772997071621df11c",
     "tabs_LKUMmR",
-    "faq_dPNyz3"
+    "faq_dPNyz3",
+    "contact_FL9QJg"
   ]
 }
