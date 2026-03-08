@@ -354,7 +354,7 @@
           "type": "heading",
           "settings": {
             "text": "Why choose this Peel Shot?",
-            "heading_tag": "h1",
+            "heading_tag": "h2",
             "text_color": "",
             "gradient": ""
           }
@@ -419,14 +419,30 @@
         "button_text_color": ""
       }
     },
+    "scrolling_text_cJADV4": {
+      "type": "scrolling-text",
+      "name": "Scrolling text",
+      "settings": {
+        "full_width": true,
+        "text": "An innovative Korean technique",
+        "text_size": "small",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 10,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "#6e4a2f",
+        "text_gradient": ""
+      }
+    },
     "before_after_image_Vhainx": {
       "type": "before-after-image",
       "name": "Before/after image",
       "settings": {
         "full_width": true,
         "subheading": "",
-        "title": "Before/after",
-        "content": "<p>Showcase your product benefit by using before/after image comparison.</p>",
+        "title": "Before & After Results",
+        "content": "<p>Expert-Approved.<br/>We don’t make promises. We show real results.</p>",
         "before_image": "shopify://shop_images/2026_20_56_42.png",
         "after_image": "shopify://shop_images/2026_20_56_45.png",
         "expand_image": false,
@@ -444,20 +460,83 @@
         "drag_cursor_color": "#000000"
       }
     },
-    "scrolling_text_cJADV4": {
-      "type": "scrolling-text",
-      "name": "Scrolling text",
+    "multi_column_MpXCVd": {
+      "type": "multi-column",
+      "blocks": {
+        "item_TKmrDG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/22_1.jpg",
+            "column_size": "4",
+            "title": "NIACINAMIDE",
+            "heading_tag": "h3",
+            "content": "<p>Brightening & Pore RefiningHelps improve skin clarity, balance excess oil, and visibly minimize the appearance of pores for a smoother, more even-looking complexion.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_KXG8gq": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/La_Fourche_-_Riz_Thai_Demi-Complet_Bio_En_Sachet_Kraft.webp",
+            "column_size": "4",
+            "title": "RICE EXTRACT",
+            "heading_tag": "h3",
+            "content": "<p>Natural Smoothing & RadianceHelps remove excess oil and dead skin cells for smoother, softer skin and visibly improved texture.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_i6X7Bi": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2026_21_08_06.png",
+            "column_size": "4",
+            "title": "AHA + BHA",
+            "heading_tag": "h3",
+            "content": "<p>Gentle Yet Deep ExfoliationHelps gently remove dead skin cells, deeply unclog pores, and refine skin texture for a smoother, brighter, and more even-looking complexion.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_BgQ8AW": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Skincode-Ingredients-Pentavitin.webp",
+            "column_size": "4",
+            "title": "PENTAVITIN",
+            "heading_tag": "h3",
+            "content": "<p>Long-Lasting HydrationHelps lock moisture into the skin, prevent post-exfoliation dryness, and keep your skin feeling comfortable and hydrated all day long.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_TKmrDG",
+        "item_KXG8gq",
+        "item_i6X7Bi",
+        "item_BgQ8AW"
+      ],
+      "name": "Multi-column",
       "settings": {
         "full_width": true,
-        "text": "An innovative Korean technique",
-        "text_size": "small",
-        "text_style": "fill",
-        "scrolling_mode": "auto",
-        "scrolling_speed": 10,
-        "background": "#ffffff",
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "center",
+        "autoplay": true,
+        "autoplay_delay": 5,
+        "pause_on_hover": true,
+        "subheading": "",
+        "title": "High-Quality Ingredients !",
+        "content": "<p>Natural actives for a transformative glow.</p>",
+        "background": "",
         "background_gradient": "",
-        "text_color": "#6e4a2f",
-        "text_gradient": ""
+        "text_color": ""
       }
     },
     "multi_column_G4VY83": {
@@ -721,8 +800,9 @@
     "featured_product_GnXUix",
     "rich_text_NTbRkD",
     "multiple_images_with_text_t3gKjK",
-    "before_after_image_Vhainx",
     "scrolling_text_cJADV4",
+    "before_after_image_Vhainx",
+    "multi_column_MpXCVd",
     "multi_column_G4VY83",
     "1772997071621df11c",
     "tabs_LKUMmR",
