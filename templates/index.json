@@ -15,7 +15,6 @@
         "image_rxpqK7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/montre-connecter-alarm_webp.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
@@ -37,7 +36,6 @@
         "image_GqyGCA": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/montre-connecter-alarm_webp.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
@@ -158,8 +156,13 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "collection": "",
-        "products": [],
+        "collection": "our-skincare",
+        "products": [
+          "bio-collagen-mask",
+          "korean-rice-peel-shot-exfoliating-serums",
+          "microneedle-patches-for-dark-circles",
+          "skineo-face-brush"
+        ],
         "full_width": true,
         "stack_products": true,
         "show_progress_bar": false,
