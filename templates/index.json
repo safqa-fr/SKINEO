@@ -88,13 +88,6 @@
             "logo_max_width": 160
           }
         },
-        "logo_RANjjt": {
-          "type": "logo",
-          "settings": {
-            "logo_height": 60,
-            "logo_max_width": 160
-          }
-        },
         "logo_V4GmgT": {
           "type": "logo",
           "settings": {
@@ -115,7 +108,14 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/VOGUE.svg",
-            "logo_height": 40,
+            "logo_height": 100,
+            "logo_max_width": 160
+          }
+        },
+        "logo_RANjjt": {
+          "type": "logo",
+          "settings": {
+            "logo_height": 60,
             "logo_max_width": 160
           }
         },
@@ -150,10 +150,10 @@
       },
       "block_order": [
         "logo_JcTaD8",
-        "logo_RANjjt",
         "logo_V4GmgT",
         "logo_R4gwTx",
         "logo_YCPLWM",
+        "logo_RANjjt",
         "logo_tFQYPE",
         "logo_XbCTCA",
         "logo_nhymdh",
