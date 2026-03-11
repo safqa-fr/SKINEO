@@ -69,7 +69,7 @@
         "logo": "shopify://shop_images/logo_white.png",
         "logo_max_width": 140,
         "logo_mobile_max_width": 100,
-        "menu": "main-menu",
+        "menu": "main-menu-copie",
         "sidebar_menu": "",
         "secondary_menu": "",
         "menu_open_trigger": "click",
