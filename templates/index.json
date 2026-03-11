@@ -15,8 +15,8 @@
         "image_rxpqK7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Lymphatic_drainage_brush.png",
-            "mobile_image": "shopify://shop_images/lymphatic-drainage-face-brush-mobile.webp",
+            "image": "shopify://shop_images/Home_page_desktop_2_e00fe574-045f-49ee-9672-8bb45b842519.webp",
+            "mobile_image": "shopify://shop_images/Home_page_mobile_1_37bcb4f7-7015-43ae-b21c-1ac2cb1537be.webp",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
@@ -38,8 +38,6 @@
         "image_GqyGCA": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/korean-skincare-under-eye-gel-patches-glass-skinkorean-skincare-under-eye-gel-patches-glass-skin_943b8c7e-06a7-4a5a-b0a9-ef1e8743be59.png",
-            "mobile_image": "shopify://shop_images/korean-skincare-under-eye-gel-patches-glass-skin_2f8f4e2c-8eca-450a-b948-900d17ded4fa.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
@@ -83,7 +81,6 @@
         "logo_JcTaD8": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/COSMOPOLITAN.png",
             "logo_height": 100,
             "logo_max_width": 160
           }
@@ -91,7 +88,6 @@
         "logo_V4GmgT": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/VOGUE.svg",
             "logo_height": 30,
             "logo_max_width": 160
           }
@@ -99,7 +95,6 @@
         "logo_R4gwTx": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/MARIE_CLAIRE.avif",
             "logo_height": 50,
             "logo_max_width": 160
           }
@@ -107,7 +102,6 @@
         "logo_YCPLWM": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/ELLE.svg",
             "logo_height": 40,
             "logo_max_width": 160
           }
@@ -115,7 +109,6 @@
         "logo_tFQYPE": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/COSMOPOLITAN.png",
             "logo_height": 100,
             "logo_max_width": 160
           }
@@ -123,7 +116,6 @@
         "logo_XbCTCA": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/VOGUE.svg",
             "logo_height": 30,
             "logo_max_width": 160
           }
@@ -131,7 +123,6 @@
         "logo_nhymdh": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/MARIE_CLAIRE.avif",
             "logo_height": 50,
             "logo_max_width": 160
           }
@@ -139,7 +130,6 @@
         "logo_kWptfT": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/ELLE.svg",
             "logo_height": 40,
             "logo_max_width": 160
           }
