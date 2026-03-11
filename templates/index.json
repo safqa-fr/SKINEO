@@ -15,7 +15,6 @@
         "image_rxpqK7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Home_page_desktop_2_e00fe574-045f-49ee-9672-8bb45b842519.webp",
             "mobile_image": "shopify://shop_images/Home_page_mobile_1_37bcb4f7-7015-43ae-b21c-1ac2cb1537be.webp",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-center text-center",
