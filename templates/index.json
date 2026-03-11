@@ -15,6 +15,7 @@
         "image_rxpqK7": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/montre-connecter-alarm_webp.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
@@ -25,7 +26,7 @@
             "button_text": "Start My Ritual",
             "button_link": "shopify://products/noomy-aura",
             "text_color": "#ffffff",
-            "button_background": "#6e4a2f",
+            "button_background": "#000000",
             "button_text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -36,6 +37,7 @@
         "image_GqyGCA": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/montre-connecter-alarm_webp.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
@@ -157,12 +159,7 @@
       "name": "Featured collection",
       "settings": {
         "collection": "",
-        "products": [
-          "skineo-face-brush",
-          "microneedle-patches-for-dark-circles",
-          "korean-rice-peel-shot-exfoliating-serums",
-          "bio-collagen-mask"
-        ],
+        "products": [],
         "full_width": true,
         "stack_products": true,
         "show_progress_bar": false,
