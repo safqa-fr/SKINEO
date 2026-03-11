@@ -14,10 +14,10 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "message_i7UL7J": {
+        "message_eG7mUj": {
           "type": "message",
           "settings": {
-            "text": "🌸Women’s Day Sale — Up to 50% OFF🌸",
+            "text": "WINTER SALE: 50% OFF",
             "url": ""
           }
         },
@@ -44,7 +44,7 @@
         }
       },
       "block_order": [
-        "message_i7UL7J",
+        "message_eG7mUj",
         "message_H6Y3Pt",
         "message_krnqtr",
         "message_qgLgdx"
@@ -56,7 +56,7 @@
         "text_size": "text-base",
         "navigation_mode": "scrolling",
         "scrolling_speed": 10,
-        "background": "#6e4a2f",
+        "background": "#000000",
         "background_gradient": "",
         "text_color": "#ffffff"
       }
