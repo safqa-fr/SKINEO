@@ -99,6 +99,7 @@
         "logo_R4gwTx": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/MARIE_CLAIRE.avif",
             "logo_height": 50,
             "logo_max_width": 160
           }
@@ -106,6 +107,7 @@
         "logo_YCPLWM": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/VOGUE.svg",
             "logo_height": 40,
             "logo_max_width": 160
           }
