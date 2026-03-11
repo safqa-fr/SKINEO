@@ -15,7 +15,6 @@
         "image_rxpqK7": {
           "type": "image",
           "settings": {
-            "mobile_image": "shopify://shop_images/Home_page_mobile_1_37bcb4f7-7015-43ae-b21c-1ac2cb1537be.webp",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
@@ -24,7 +23,7 @@
             "paragraph": "<h3>A natural daily ritual for a more relaxed-looking face</h3>",
             "heading_tag": "h1",
             "button_text": "Start My Ritual",
-            "button_link": "shopify://products/skineo-face-brush",
+            "button_link": "shopify://products/noomy-aura",
             "text_color": "#ffffff",
             "button_background": "#6e4a2f",
             "button_text_color": "#ffffff",
