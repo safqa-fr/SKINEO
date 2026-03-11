@@ -116,7 +116,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/ELLE.svg",
-            "logo_height": 60,
+            "logo_height": 100,
             "logo_max_width": 160
           }
         },
@@ -132,7 +132,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/MARIE_CLAIRE.avif",
-            "logo_height": 30,
+            "logo_height": 100,
             "logo_max_width": 160
           }
         },
