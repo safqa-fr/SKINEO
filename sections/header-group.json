@@ -66,7 +66,7 @@
       "settings": {
         "enable_sticky": true,
         "hide_on_scroll": true,
-        "logo": "shopify://shop_images/logo_white.png",
+        "logo": "shopify://shop_images/skineo-logo.webp",
         "logo_max_width": 140,
         "logo_mobile_max_width": 100,
         "menu": "main-menu-copie",
